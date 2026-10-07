@@ -6,7 +6,7 @@ using UnityEngine;
 /// The bridge gets a solid collider after the connection animation completes.
 /// </summary>
 [DisallowMultipleComponent]
-public sealed class PointArrayBridge2D : MonoBehaviour, INoteWaveReceiver2D
+public sealed class PointArrayBridge2D : MonoBehaviour, INoteWaveReceiver2D, INoteWaveRippleReceiver2D, INoteWaveContactPoint2D
 {
     private static readonly int DotCountId = Shader.PropertyToID("_DotCount");
     private static readonly int DotRadiusId = Shader.PropertyToID("_DotRadius");
@@ -28,6 +28,10 @@ public sealed class PointArrayBridge2D : MonoBehaviour, INoteWaveReceiver2D
     private MaterialPropertyBlock propertyBlock;
     private bool isConnecting;
     private bool isConnected;
+    private Vector2 rippleOrigin;
+    private float rippleStartTime;
+    private float rippleSpeed;
+    private float rippleMaxRadius;
 
     public bool IsWaveAvailable => endpointA != null && endpointB != null && !isConnecting && !isConnected;
 
@@ -70,8 +74,13 @@ public sealed class PointArrayBridge2D : MonoBehaviour, INoteWaveReceiver2D
 
     public float GetWaveContactDistance(Vector2 origin)
     {
+        return Vector2.Distance(origin, GetWaveContactPoint(origin));
+    }
+
+    public Vector2 GetWaveContactPoint(Vector2 origin)
+    {
         if (endpointA == null || endpointB == null)
-            return Vector2.Distance(origin, transform.position);
+            return transform.position;
 
         Vector2 start = endpointA.position;
         Vector2 end = endpointB.position;
@@ -81,7 +90,11 @@ public sealed class PointArrayBridge2D : MonoBehaviour, INoteWaveReceiver2D
             ? Mathf.Clamp01(Vector2.Dot(origin - start, segment) / segmentLengthSquared)
             : 0f;
         Vector2 closestPoint = start + segment * t;
-        return Mathf.Max(0f, Vector2.Distance(origin, closestPoint) - activationRadius);
+        Vector2 towardSource = origin - closestPoint;
+        float centerlineDistance = towardSource.magnitude;
+        return centerlineDistance > activationRadius
+            ? closestPoint + towardSource / centerlineDistance * activationRadius
+            : origin;
     }
 
     public bool ReceiveWave(NoteWaveKind kind)
@@ -95,6 +108,20 @@ public sealed class PointArrayBridge2D : MonoBehaviour, INoteWaveReceiver2D
         lineRenderer.SetPosition(1, endpointA.position);
         StartCoroutine(ConnectEndpoints());
         return true;
+    }
+
+    public void OnNoteWaveReached(NoteWaveKind kind, Vector2 origin, float startTime, float expansionSpeed, float maxRadius)
+    {
+        rippleOrigin = origin;
+        rippleStartTime = startTime;
+        rippleSpeed = expansionSpeed;
+        rippleMaxRadius = maxRadius;
+
+        if (lineRenderer == null || propertyBlock == null)
+            return;
+
+        NoteWaveRippleShader2D.Apply(propertyBlock, rippleOrigin, rippleStartTime, rippleSpeed, rippleMaxRadius);
+        lineRenderer.SetPropertyBlock(propertyBlock);
     }
 
     private IEnumerator ConnectEndpoints()

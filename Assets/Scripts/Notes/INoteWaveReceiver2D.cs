@@ -19,3 +19,12 @@ public interface INoteWaveReceiver2D
     float GetWaveContactDistance(Vector2 origin);
     bool ReceiveWave(NoteWaveKind kind);
 }
+
+/// <summary>
+/// Optional exact contact-point provider for targets whose interaction shape
+/// is not represented by an enabled Collider2D.
+/// </summary>
+public interface INoteWaveContactPoint2D
+{
+    Vector2 GetWaveContactPoint(Vector2 origin);
+}

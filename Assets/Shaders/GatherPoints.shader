@@ -6,6 +6,15 @@ Shader "PointGameJam/Gather Points"
         _GatherProgress ("Gather Progress", Range(0, 1)) = 0
         _DotSize ("Dot Size", Float) = 0.085
         _ScatteredAlpha ("Scattered Alpha", Range(0, 1)) = 0.45
+        [HideInInspector] _RippleEnabled ("Ripple Enabled", Float) = 0
+        [HideInInspector] _RippleOrigin ("Ripple Origin", Vector) = (0,0,0,0)
+        [HideInInspector] _RippleStartTime ("Ripple Start Time", Float) = 0
+        [HideInInspector] _RippleSpeed ("Ripple Speed", Float) = 15
+        [HideInInspector] _RippleMaxRadius ("Ripple Max Radius", Float) = 0
+        [HideInInspector] _RippleAmplitude ("Ripple Amplitude", Float) = 0.08
+        [HideInInspector] _RippleFrequency ("Ripple Frequency", Float) = 28
+        [HideInInspector] _RippleDamping ("Ripple Damping", Float) = 5
+        [HideInInspector] _RippleDotScale ("Ripple Dot Scale", Float) = 0.55
     }
 
     SubShader
@@ -25,7 +34,24 @@ Shader "PointGameJam/Gather Points"
             float _GatherProgress;
             float _DotSize;
             float _ScatteredAlpha;
+            float _RippleEnabled;
+            float4 _RippleOrigin;
+            float _RippleStartTime;
+            float _RippleSpeed;
+            float _RippleMaxRadius;
+            float _RippleAmplitude;
+            float _RippleFrequency;
+            float _RippleDamping;
+            float _RippleDotScale;
         CBUFFER_END
+
+        float EvaluateRipple(float2 worldPosition)
+        {
+            float distanceFromOrigin = distance(worldPosition, _RippleOrigin.xy);
+            float age = _Time.y - _RippleStartTime - distanceFromOrigin / max(_RippleSpeed, 0.01);
+            float active = _RippleEnabled * step(0.0, age) * step(distanceFromOrigin, _RippleMaxRadius);
+            return active * sin(max(age, 0.0) * _RippleFrequency) * exp(-max(age, 0.0) * _RippleDamping);
+        }
 
         struct Attributes
         {
@@ -48,10 +74,19 @@ Shader "PointGameJam/Gather Points"
             float delay = saturate(input.animationData.z);
             float pointProgress = saturate((_GatherProgress - delay) / max(1.0 - delay, 0.0001));
             float2 center = lerp(input.positionOS.xy, input.targetCenter, pointProgress);
-            float size = _DotSize * lerp(0.65, 1.0, pointProgress);
-            float2 positionOS = center + input.animationData.xy * size * 0.5;
+            float3 centerWS = TransformObjectToWorld(float3(center, input.positionOS.z));
+            float ripple = EvaluateRipple(centerWS.xy);
+            float2 outward = centerWS.xy - _RippleOrigin.xy;
+            outward /= max(length(outward), 0.0001);
+            centerWS.xy += outward * (_RippleAmplitude * ripple);
 
-            output.positionHCS = TransformObjectToHClip(float3(positionOS, input.positionOS.z));
+            float size = _DotSize * lerp(0.65, 1.0, pointProgress);
+            size *= 1.0 + abs(ripple) * _RippleDotScale;
+            float2 cornerOS = center + input.animationData.xy * size * 0.5;
+            float3 positionWS = TransformObjectToWorld(float3(cornerOS, input.positionOS.z));
+            positionWS.xy += outward * (_RippleAmplitude * ripple);
+
+            output.positionHCS = TransformWorldToHClip(positionWS);
             output.dotCoordinate = input.animationData.xy;
             output.alpha = lerp(_ScatteredAlpha, 1.0, pointProgress) * input.color.a;
             return output;

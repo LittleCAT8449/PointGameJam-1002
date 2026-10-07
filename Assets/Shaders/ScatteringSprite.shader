@@ -10,6 +10,15 @@ Shader "PointGameJam/Scattering Sprite"
         _ScatterDistance ("Scatter Distance", Range(0, 0.5)) = 0.18
         _EdgeWidth ("Dissolve Edge Width", Range(0.001, 0.2)) = 0.04
         _EdgeColor ("Dissolve Edge Color", Color) = (1,0.55,1,0.8)
+        [HideInInspector] _RippleEnabled ("Ripple Enabled", Float) = 0
+        [HideInInspector] _RippleOrigin ("Ripple Origin", Vector) = (0,0,0,0)
+        [HideInInspector] _RippleStartTime ("Ripple Start Time", Float) = 0
+        [HideInInspector] _RippleSpeed ("Ripple Speed", Float) = 15
+        [HideInInspector] _RippleMaxRadius ("Ripple Max Radius", Float) = 0
+        [HideInInspector] _RippleFrequency ("Ripple Frequency", Float) = 28
+        [HideInInspector] _RippleDamping ("Ripple Damping", Float) = 5
+        [HideInInspector] _RippleDotScale ("Ripple Dot Scale", Float) = 0.2
+        [HideInInspector] _RippleWobble ("Ripple Wobble", Float) = 0.035
     }
 
     SubShader
@@ -36,7 +45,24 @@ Shader "PointGameJam/Scattering Sprite"
             float _ScatterProgress;
             float _ScatterDistance;
             float _EdgeWidth;
+            float _RippleEnabled;
+            float4 _RippleOrigin;
+            float _RippleStartTime;
+            float _RippleSpeed;
+            float _RippleMaxRadius;
+            float _RippleFrequency;
+            float _RippleDamping;
+            float _RippleDotScale;
+            float _RippleWobble;
         CBUFFER_END
+
+        float EvaluateRipple(float2 worldPosition)
+        {
+            float distanceFromOrigin = distance(worldPosition, _RippleOrigin.xy);
+            float age = _Time.y - _RippleStartTime - distanceFromOrigin / max(_RippleSpeed, 0.01);
+            float active = _RippleEnabled * step(0.0, age) * step(distanceFromOrigin, _RippleMaxRadius);
+            return active * sin(max(age, 0.0) * _RippleFrequency) * exp(-max(age, 0.0) * _RippleDamping);
+        }
 
         struct Attributes
         {
@@ -50,14 +76,17 @@ Shader "PointGameJam/Scattering Sprite"
             float4 positionHCS : SV_POSITION;
             float2 uv : TEXCOORD0;
             float4 color : COLOR;
+            float2 positionWS : TEXCOORD1;
         };
 
         Varyings Vert(Attributes input)
         {
             Varyings output;
-            output.positionHCS = TransformObjectToHClip(input.positionOS.xyz);
+            float3 positionWS = TransformObjectToWorld(input.positionOS.xyz);
+            output.positionHCS = TransformWorldToHClip(positionWS);
             output.uv = input.uv;
             output.color = input.color * _Color;
+            output.positionWS = positionWS.xy;
             return output;
         }
 
@@ -84,10 +113,13 @@ Shader "PointGameJam/Scattering Sprite"
 
             float2 randomDirection = Hash22(cellIndex) * 2.0 - 1.0;
             randomDirection /= max(length(randomDirection), 0.0001);
+            float ripple = EvaluateRipple(input.positionWS);
             float2 pointCenter = 0.5 + randomDirection * _ScatterProgress * _ScatterDistance;
+            pointCenter += randomDirection * (_RippleWobble * ripple);
             float pointDistance = length(cellPosition - pointCenter);
             float antialias = max(fwidth(pointDistance), 0.002);
-            half pointMask = 1.0h - smoothstep(_DotRadius - antialias, _DotRadius + antialias, pointDistance);
+            float pointRadius = min(0.5, _DotRadius * (1.0 + abs(ripple) * _RippleDotScale));
+            half pointMask = 1.0h - smoothstep(pointRadius - antialias, pointRadius + antialias, pointDistance);
 
             float edgeWidth = max(_EdgeWidth, 0.001);
             float dissolveFront = _ScatterProgress * (1.0 + 2.0 * edgeWidth) - edgeWidth;
@@ -97,6 +129,7 @@ Shader "PointGameJam/Scattering Sprite"
             half dissolveEdge = 1.0h - smoothstep(edgeWidth * 0.15, edgeWidth, edgeDistance);
 
             half3 baseColor = source.rgb * input.color.rgb;
+            baseColor = saturate(baseColor * (1.0 + abs(ripple) * 0.35));
             half3 finalColor = lerp(baseColor, _EdgeColor.rgb, dissolveEdge * _EdgeColor.a);
             half alpha = source.a * input.color.a * pointMask * visibility;
             return half4(finalColor, alpha);

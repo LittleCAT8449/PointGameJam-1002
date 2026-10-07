@@ -6,6 +6,7 @@ using UnityEngine;
 /// reached by the second note's wave.
 /// </summary>
 [DisallowMultipleComponent]
+[RequireComponent(typeof(NoteWaveBlocker2D))]
 public sealed class SwitchableTarget2D : MonoBehaviour, INoteWaveReceiver2D
 {
     [Serializable]

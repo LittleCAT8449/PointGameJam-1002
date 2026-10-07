@@ -6,8 +6,8 @@ using UnityEngine;
 /// the fourth note, then removes its solid colliders.
 /// </summary>
 [DisallowMultipleComponent]
-[RequireComponent(typeof(SpriteRenderer), typeof(BoxCollider2D))]
-public sealed class DispersibleWall2D : MonoBehaviour, INoteWaveReceiver2D
+[RequireComponent(typeof(SpriteRenderer), typeof(BoxCollider2D), typeof(NoteWaveBlocker2D))]
+public sealed class DispersibleWall2D : MonoBehaviour, INoteWaveReceiver2D, INoteWaveRippleReceiver2D
 {
     private static readonly int GridCountId = Shader.PropertyToID("_GridCount");
     private static readonly int DotRadiusId = Shader.PropertyToID("_DotRadius");
@@ -32,6 +32,11 @@ public sealed class DispersibleWall2D : MonoBehaviour, INoteWaveReceiver2D
     private MaterialPropertyBlock propertyBlock;
     private bool isScattering;
     private bool isScattered;
+    private Vector2 rippleOrigin;
+    private float rippleStartTime;
+    private float rippleSpeed;
+    private float rippleMaxRadius;
+    private bool hasWaveRipple;
 
     public bool IsWaveAvailable => !isScattering && !isScattered;
 
@@ -116,6 +121,28 @@ public sealed class DispersibleWall2D : MonoBehaviour, INoteWaveReceiver2D
         return true;
     }
 
+    public void OnNoteWaveReached(NoteWaveKind kind, Vector2 origin, float startTime, float expansionSpeed, float maxRadius)
+    {
+        rippleOrigin = origin;
+        rippleStartTime = startTime;
+        rippleSpeed = expansionSpeed;
+        rippleMaxRadius = maxRadius;
+        hasWaveRipple = true;
+
+        if (visuals == null || propertyBlock == null)
+            return;
+
+        foreach (SpriteRenderer visual in visuals)
+        {
+            if (visual == null)
+                continue;
+
+            visual.GetPropertyBlock(propertyBlock);
+            NoteWaveRippleShader2D.Apply(propertyBlock, rippleOrigin, rippleStartTime, rippleSpeed, rippleMaxRadius);
+            visual.SetPropertyBlock(propertyBlock);
+        }
+    }
+
     private IEnumerator ScatterDots()
     {
         float elapsed = 0f;
@@ -174,6 +201,8 @@ public sealed class DispersibleWall2D : MonoBehaviour, INoteWaveReceiver2D
         propertyBlock.SetFloat(ScatterDistanceId, scatterDistance);
         propertyBlock.SetFloat(EdgeWidthId, dissolveEdgeWidth);
         propertyBlock.SetColor(EdgeColorId, dissolveEdgeColor);
+        if (hasWaveRipple)
+            NoteWaveRippleShader2D.Apply(propertyBlock, rippleOrigin, rippleStartTime, rippleSpeed, rippleMaxRadius);
         visual.SetPropertyBlock(propertyBlock);
     }
 

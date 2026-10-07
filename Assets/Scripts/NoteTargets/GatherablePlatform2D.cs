@@ -9,7 +9,7 @@ using UnityEngine.Rendering;
 /// </summary>
 [DisallowMultipleComponent]
 [RequireComponent(typeof(BoxCollider2D))]
-public sealed class GatherablePlatform2D : MonoBehaviour, INoteWaveReceiver2D
+public sealed class GatherablePlatform2D : MonoBehaviour, INoteWaveReceiver2D, INoteWaveRippleReceiver2D
 {
     private static readonly int GatherProgressId = Shader.PropertyToID("_GatherProgress");
     private static readonly int DotSizeId = Shader.PropertyToID("_DotSize");
@@ -41,6 +41,11 @@ public sealed class GatherablePlatform2D : MonoBehaviour, INoteWaveReceiver2D
     private Mesh pointMesh;
     private bool isGathering;
     private bool isGathered;
+    private Vector2 rippleOrigin;
+    private float rippleStartTime;
+    private float rippleSpeed;
+    private float rippleMaxRadius;
+    private bool hasWaveRipple;
 
     public bool IsWaveAvailable => !isGathering && !isGathered;
 
@@ -72,6 +77,21 @@ public sealed class GatherablePlatform2D : MonoBehaviour, INoteWaveReceiver2D
         isGathering = true;
         StartCoroutine(GatherPoints());
         return true;
+    }
+
+    public void OnNoteWaveReached(NoteWaveKind kind, Vector2 origin, float startTime, float expansionSpeed, float maxRadius)
+    {
+        rippleOrigin = origin;
+        rippleStartTime = startTime;
+        rippleSpeed = expansionSpeed;
+        rippleMaxRadius = maxRadius;
+        hasWaveRipple = true;
+
+        if (meshRenderer != null && propertyBlock != null)
+        {
+            NoteWaveRippleShader2D.Apply(propertyBlock, rippleOrigin, rippleStartTime, rippleSpeed, rippleMaxRadius);
+            meshRenderer.SetPropertyBlock(propertyBlock);
+        }
     }
 
     private void CreatePointMesh()
@@ -140,8 +160,9 @@ public sealed class GatherablePlatform2D : MonoBehaviour, INoteWaveReceiver2D
         pointMesh.colors = vertexColors;
         pointMesh.triangles = triangles;
 
-        float halfWidth = Mathf.Max(platformSize.x * 0.5f, scatterRadius) + dotSize;
-        float halfHeight = Mathf.Max(platformSize.y * 0.5f, scatterRadius) + dotSize;
+        const float rippleBoundsPadding = 0.1f;
+        float halfWidth = Mathf.Max(platformSize.x * 0.5f, scatterRadius) + dotSize + rippleBoundsPadding;
+        float halfHeight = Mathf.Max(platformSize.y * 0.5f, scatterRadius) + dotSize + rippleBoundsPadding;
         pointMesh.bounds = new Bounds(Vector3.zero, new Vector3(halfWidth * 2f, halfHeight * 2f, 0.1f));
     }
 
@@ -222,6 +243,8 @@ public sealed class GatherablePlatform2D : MonoBehaviour, INoteWaveReceiver2D
         propertyBlock.SetFloat(DotSizeId, dotSize);
         propertyBlock.SetColor(DotColorId, dotColor);
         propertyBlock.SetFloat(ScatteredAlphaId, scatteredAlpha);
+        if (hasWaveRipple)
+            NoteWaveRippleShader2D.Apply(propertyBlock, rippleOrigin, rippleStartTime, rippleSpeed, rippleMaxRadius);
         meshRenderer.SetPropertyBlock(propertyBlock);
     }
 

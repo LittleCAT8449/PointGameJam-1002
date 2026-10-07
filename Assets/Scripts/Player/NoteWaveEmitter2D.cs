@@ -26,9 +26,39 @@ public sealed class NoteWaveEmitter2D : MonoBehaviour
         public bool debugDisplay = true;
     }
 
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+    [Serializable]
+    private sealed class DebugUnlockBinding
+    {
+        public NoteWaveKind kind;
+        public Key key;
+    }
+#endif
+
     [Header("Non-keyboard Input")]
     [SerializeField] private InputActionAsset inputActions;
     [SerializeField] private string actionMapName = "Player";
+
+    [Header("Selected Note")]
+    [SerializeField, Tooltip("按下此键时释放当前 UI 选中的音符。")]
+    private Key playSelectedNoteKey = Key.Q;
+
+    [Header("Note Unlocks")]
+    [SerializeField, Tooltip("新游戏开始时已获得的音符。默认只开放显。")]
+    private NoteWaveKind[] initiallyUnlockedNotes = { NoteWaveKind.Reveal };
+
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+    [Header("Debug Unlock")]
+    [SerializeField] private bool enableDebugUnlockKeys = true;
+    [SerializeField] private DebugUnlockBinding[] debugUnlockBindings =
+    {
+        new DebugUnlockBinding { kind = NoteWaveKind.Reveal, key = Key.F1 },
+        new DebugUnlockBinding { kind = NoteWaveKind.Switch, key = Key.F2 },
+        new DebugUnlockBinding { kind = NoteWaveKind.Gather, key = Key.F3 },
+        new DebugUnlockBinding { kind = NoteWaveKind.Scatter, key = Key.F4 },
+        new DebugUnlockBinding { kind = NoteWaveKind.Connect, key = Key.F5 }
+    };
+#endif
 
     [Header("Notes")]
     [SerializeField] private NoteBinding[] noteBindings =
@@ -69,10 +99,29 @@ public sealed class NoteWaveEmitter2D : MonoBehaviour
 
     private readonly List<InputAction> subscribedActions = new List<InputAction>();
     private readonly Dictionary<NoteWaveKind, float> nextCastTimeByKind = new Dictionary<NoteWaveKind, float>();
+    private static readonly HashSet<NoteWaveKind> unlockedNoteKinds = new HashSet<NoteWaveKind>();
+    private static bool unlockDataInitialized;
     private InputActionMap playerActionMap;
+    private NoteWaveKind selectedNoteKind;
+    private int selectedNoteFrame = -1;
+    private bool hasSelectedNote;
+
+    public bool HasSelectedNote => hasSelectedNote;
+    public NoteWaveKind SelectedNoteKind => selectedNoteKind;
+    public IReadOnlyCollection<NoteWaveKind> UnlockedNotes => unlockedNoteKinds;
+    public event Action<NoteWaveKind> NoteUnlocked;
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void ResetUnlockDataForNewPlaySession()
+    {
+        unlockedNoteKinds.Clear();
+        unlockDataInitialized = false;
+    }
 
     private void Awake()
     {
+        InitializeUnlockData();
+
         if (inputActions == null)
         {
             Debug.LogWarning($"No Input Actions asset assigned to {nameof(NoteWaveEmitter2D)} on '{name}'. Keyboard keys still work.", this);
@@ -131,8 +180,38 @@ public sealed class NoteWaveEmitter2D : MonoBehaviour
     private void Update()
     {
         Keyboard keyboard = Keyboard.current;
-        if (keyboard == null || noteBindings == null)
+        if (keyboard == null)
             return;
+
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        if (enableDebugUnlockKeys && debugUnlockBindings != null)
+        {
+            foreach (DebugUnlockBinding debugBinding in debugUnlockBindings)
+            {
+                if (debugBinding == null || debugBinding.key == Key.None)
+                    continue;
+
+                if (keyboard[debugBinding.key].wasPressedThisFrame
+                    && UnlockNote(debugBinding.kind))
+                {
+                    Debug.Log($"[Debug] Unlocked note: {debugBinding.kind}", this);
+                }
+            }
+        }
+#endif
+
+        if (noteBindings == null)
+            return;
+
+        // Give the selected-note action priority so a configurable key that
+        // overlaps a note shortcut still emits only one wave.
+        if (hasSelectedNote
+            && playSelectedNoteKey != Key.None
+            && keyboard[playSelectedNoteKey].wasPressedThisFrame)
+        {
+            EmitSelectedNote();
+            return;
+        }
 
         foreach (NoteBinding binding in noteBindings)
         {
@@ -154,10 +233,17 @@ public sealed class NoteWaveEmitter2D : MonoBehaviour
         if (noteBindings == null)
             return;
 
+        bool isMouseLeftClick = context.control != null
+            && context.control.device is Mouse mouse
+            && context.control == mouse.leftButton;
+
         foreach (NoteBinding binding in noteBindings)
         {
             if (binding != null && string.Equals(binding.actionName, context.action.name, StringComparison.Ordinal))
             {
+                if (binding.kind == NoteWaveKind.Reveal && isMouseLeftClick)
+                    return;
+
                 Emit(binding.kind);
                 return;
             }
@@ -176,6 +262,9 @@ public sealed class NoteWaveEmitter2D : MonoBehaviour
             return;
         }
 
+        if (!IsNoteUnlocked(kind))
+            return;
+
         if (nextCastTimeByKind.TryGetValue(kind, out float nextCastTime) && Time.time < nextCastTime)
             return;
 
@@ -185,6 +274,80 @@ public sealed class NoteWaveEmitter2D : MonoBehaviour
         waveObject.transform.position = transform.position;
         ExpandingNoteWave2D wave = waveObject.AddComponent<ExpandingNoteWave2D>();
         wave.Initialize(kind, binding.maxRadius, binding.expansionSpeed, binding.waveColor, binding.debugDisplay);
+    }
+
+    /// <summary>Stores the note chosen in the UI without emitting a wave.</summary>
+    public bool SelectNote(NoteWaveKind kind)
+    {
+        if (FindBinding(kind) == null)
+        {
+            Debug.LogWarning($"Cannot select note '{kind}': no wave configuration exists.", this);
+            return false;
+        }
+
+        if (!IsNoteUnlocked(kind))
+            return false;
+
+        selectedNoteKind = kind;
+        selectedNoteFrame = Time.frameCount;
+        hasSelectedNote = true;
+        return true;
+    }
+
+    /// <summary>Unlocks a configured note for the rest of this play session.</summary>
+    public bool UnlockNote(NoteWaveKind kind)
+    {
+        if (FindBinding(kind) == null)
+        {
+            Debug.LogWarning($"Cannot unlock note '{kind}': no wave configuration exists.", this);
+            return false;
+        }
+
+        if (!unlockedNoteKinds.Add(kind))
+            return false;
+
+        NoteUnlocked?.Invoke(kind);
+        return true;
+    }
+
+    public bool IsNoteUnlocked(NoteWaveKind kind)
+    {
+        return unlockedNoteKinds.Contains(kind);
+    }
+
+    /// <summary>Resets the collection to this emitter's configured starting notes.</summary>
+    public void ResetUnlockedNotesToDefaults()
+    {
+        unlockDataInitialized = false;
+        unlockedNoteKinds.Clear();
+        InitializeUnlockData();
+    }
+
+    private void InitializeUnlockData()
+    {
+        if (unlockDataInitialized)
+            return;
+
+        unlockDataInitialized = true;
+        unlockedNoteKinds.Clear();
+
+        if (initiallyUnlockedNotes == null)
+            return;
+
+        foreach (NoteWaveKind kind in initiallyUnlockedNotes)
+        {
+            if (FindBinding(kind) != null)
+                unlockedNoteKinds.Add(kind);
+        }
+    }
+
+    /// <summary>Emits the currently selected note, if one has been chosen.</summary>
+    public void EmitSelectedNote()
+    {
+        if (!hasSelectedNote || selectedNoteFrame == Time.frameCount)
+            return;
+
+        Emit(selectedNoteKind);
     }
 
     private NoteBinding FindBinding(NoteWaveKind kind)

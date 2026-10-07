@@ -6,7 +6,7 @@ using UnityEngine;
 /// </summary>
 [RequireComponent(typeof(SpriteRenderer))]
 [DisallowMultipleComponent]
-public sealed class ImageBrightnessDotMatrix : MonoBehaviour
+public sealed class ImageBrightnessDotMatrix : MonoBehaviour, INoteWaveRippleReceiver2D, INoteWaveContactPoint2D
 {
     [Header("Halftone")]
     [Tooltip("Source pixels between dot centers. Increase this to make the pattern sparser.")]
@@ -26,12 +26,19 @@ public sealed class ImageBrightnessDotMatrix : MonoBehaviour
     [SerializeField] private Material halftoneMaterial;
     [SerializeField] private int sortingOrderOffset = 1;
 
+    [Header("Wave Response")]
+    [Tooltip("When enabled, note waves create a traveling ripple in this object's dots.")]
+    [SerializeField] private bool waveRippleEnabled = true;
+    [Tooltip("How long the Reveal note keeps this object's dots aligned.")]
+    [SerializeField, Min(0f)] private float revealRegularDuration = 1.2f;
+
     private static readonly int GridCountId = Shader.PropertyToID("_GridCount");
     private static readonly int SpriteBoundsId = Shader.PropertyToID("_SpriteBounds");
     private static readonly int DotRatioId = Shader.PropertyToID("_DotRatio");
     private static readonly int DotColorId = Shader.PropertyToID("_DotColor");
     private static readonly int JitterStrengthId = Shader.PropertyToID("_JitterStrength");
     private static readonly int DarkPixelsLargerId = Shader.PropertyToID("_DarkPixelsLarger");
+    private static readonly int RevealRegularityId = Shader.PropertyToID("_RevealRegularity");
 
     private SpriteRenderer sourceRenderer;
     private SpriteRenderer overlayRenderer;
@@ -42,6 +49,16 @@ public sealed class ImageBrightnessDotMatrix : MonoBehaviour
     private MaterialPropertyBlock propertyBlock;
     private bool sourceWasEnabled;
     private bool cachedVisibility;
+    private Vector2 rippleOrigin;
+    private float rippleStartTime;
+    private float rippleSpeed;
+    private float rippleMaxRadius;
+    private bool hasWaveRipple;
+    private bool lastWaveRippleEnabled;
+    private float revealRegularStartTime = -1f;
+    private float revealRegularEndTime = -1f;
+    private float currentRevealRegularity;
+    private float lastAppliedRevealRegularity = -1f;
 
     private Sprite lastSprite;
     private Material lastMaterial;
@@ -61,6 +78,7 @@ public sealed class ImageBrightnessDotMatrix : MonoBehaviour
         sourceRenderer = GetComponent<SpriteRenderer>();
         sourceWasEnabled = sourceRenderer.enabled;
         propertyBlock = new MaterialPropertyBlock();
+        lastWaveRippleEnabled = waveRippleEnabled;
     }
 
     private void Start()
@@ -72,6 +90,9 @@ public sealed class ImageBrightnessDotMatrix : MonoBehaviour
     {
         if (sourceRenderer == null)
             return;
+
+        UpdateWaveRippleToggle();
+        UpdateRevealRegularity();
 
         Material material = ResolveMaterial();
         bool spriteChanged = sourceRenderer.sprite != lastSprite;
@@ -195,13 +216,118 @@ public sealed class ImageBrightnessDotMatrix : MonoBehaviour
         propertyBlock.SetFloat(JitterStrengthId, jitterStrength);
         propertyBlock.SetColor(DotColorId, dotColor);
         propertyBlock.SetFloat(DarkPixelsLargerId, darkPixelsLarger ? 1f : 0f);
+        propertyBlock.SetFloat(RevealRegularityId, currentRevealRegularity);
+        if (hasWaveRipple && waveRippleEnabled)
+            NoteWaveRippleShader2D.Apply(propertyBlock, rippleOrigin, rippleStartTime, rippleSpeed, rippleMaxRadius);
         overlayRenderer.SetPropertyBlock(propertyBlock);
+        lastAppliedRevealRegularity = currentRevealRegularity;
 
         lastMinimumDotRatio = minimumDotRatio;
         lastMaximumDotRatio = maximumDotRatio;
         lastJitterStrength = jitterStrength;
         lastDarkPixelsLarger = darkPixelsLarger;
         lastDotColor = dotColor;
+    }
+
+    public Vector2 GetWaveContactPoint(Vector2 origin)
+    {
+        if (sourceRenderer == null)
+            sourceRenderer = GetComponent<SpriteRenderer>();
+        if (sourceRenderer == null)
+            return transform.position;
+
+        Bounds bounds = sourceRenderer.bounds;
+        Vector3 closestPoint = bounds.ClosestPoint(new Vector3(origin.x, origin.y, bounds.center.z));
+        return new Vector2(closestPoint.x, closestPoint.y);
+    }
+
+    public void OnNoteWaveReached(NoteWaveKind kind, Vector2 origin, float startTime, float expansionSpeed, float maxRadius)
+    {
+        if (kind == NoteWaveKind.Reveal)
+        {
+            revealRegularStartTime = Time.time;
+            revealRegularEndTime = revealRegularStartTime + Mathf.Max(0f, revealRegularDuration);
+            UpdateRevealRegularity();
+        }
+
+        if (!waveRippleEnabled)
+        {
+            hasWaveRipple = false;
+            SetRippleEnabled(false);
+            return;
+        }
+
+        rippleOrigin = origin;
+        rippleStartTime = startTime;
+        rippleSpeed = expansionSpeed;
+        rippleMaxRadius = maxRadius;
+        hasWaveRipple = true;
+
+        if (overlayRenderer == null || propertyBlock == null)
+            return;
+
+        overlayRenderer.GetPropertyBlock(propertyBlock);
+        NoteWaveRippleShader2D.Apply(propertyBlock, rippleOrigin, rippleStartTime, rippleSpeed, rippleMaxRadius);
+        overlayRenderer.SetPropertyBlock(propertyBlock);
+    }
+
+    private void UpdateWaveRippleToggle()
+    {
+        if (lastWaveRippleEnabled == waveRippleEnabled)
+            return;
+
+        lastWaveRippleEnabled = waveRippleEnabled;
+        if (!waveRippleEnabled)
+            hasWaveRipple = false;
+
+        SetRippleEnabled(waveRippleEnabled && hasWaveRipple);
+    }
+
+    private void SetRippleEnabled(bool enabled)
+    {
+        if (overlayRenderer == null || propertyBlock == null)
+            return;
+
+        overlayRenderer.GetPropertyBlock(propertyBlock);
+        NoteWaveRippleShader2D.SetEnabled(propertyBlock, enabled);
+        overlayRenderer.SetPropertyBlock(propertyBlock);
+    }
+
+    private void UpdateRevealRegularity()
+    {
+        float regularity = 0f;
+        float duration = revealRegularEndTime - revealRegularStartTime;
+        if (duration > 0f && Time.time < revealRegularEndTime)
+        {
+            float transition = Mathf.Min(0.15f, duration * 0.25f);
+            if (transition > 0f)
+            {
+                float elapsed = Time.time - revealRegularStartTime;
+                float remaining = revealRegularEndTime - Time.time;
+                float fadeIn = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(elapsed / transition));
+                float fadeOut = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(remaining / transition));
+                regularity = Mathf.Min(fadeIn, fadeOut);
+            }
+            else
+            {
+                regularity = 1f;
+            }
+        }
+
+        if (Mathf.Approximately(currentRevealRegularity, regularity))
+            return;
+
+        currentRevealRegularity = regularity;
+        if (overlayRenderer == null || propertyBlock == null
+            || Mathf.Approximately(lastAppliedRevealRegularity, currentRevealRegularity))
+        {
+            return;
+        }
+
+        overlayRenderer.GetPropertyBlock(propertyBlock);
+        propertyBlock.SetFloat(RevealRegularityId, currentRevealRegularity);
+        overlayRenderer.SetPropertyBlock(propertyBlock);
+        lastAppliedRevealRegularity = currentRevealRegularity;
     }
 
     private void ApplyVisibility()
