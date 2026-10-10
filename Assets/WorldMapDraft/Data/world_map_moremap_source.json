@@ -1,0 +1,2800 @@
+{
+  "meta": {
+    "title": "银河恶魔城式世界总地图（第一版拓扑草案）",
+    "status": "EXPANDED_PROPOSED_TOPOLOGY_AND_ABSTRACT_LAYOUT",
+    "basis": [
+      "众声成象_全流程玩法设计_v0.4.docx",
+      "关卡流程.docx",
+      "本轮用户要求"
+    ],
+    "language": "zh-CN",
+    "room_count": 39,
+    "region_count": 5,
+    "layout_note": "布局增加跨区回接、下层拱廊、外环与隐藏井道；房间重叠检查针对房间矩形，不代表实际平台几何。",
+    "canon_boundary": "沿用原27流程场景和五种能力；区域命名、支线、隐藏房、捷径及连接方式为本轮提案。未知符号6不加入。",
+    "output_folder": "D:\\聚光灯\\WorldMapDraft",
+    "schema_note": "Room positions include an abstract grid position and matching draw.io pixel bounds; neither represents Unity world units.",
+    "connection_count": 53,
+    "change_summary": "由29间扩为39间；保留原有五区与五种知识顺序；加入10间探索/回接空间和9条新增闭环关系。"
+  },
+  "regions": [
+    {
+      "id": "A1",
+      "name": "失谐岸线",
+      "relative_position": "世界西侧",
+      "purpose": "开场与显现教学",
+      "status": "proposed"
+    },
+    {
+      "id": "A2",
+      "name": "共鸣中庭",
+      "relative_position": "中西部枢纽",
+      "purpose": "安全汇合、分流与回访",
+      "status": "proposed"
+    },
+    {
+      "id": "A3",
+      "name": "空鸣盆地",
+      "relative_position": "中庭北侧",
+      "purpose": "教授收与状态组合",
+      "status": "proposed"
+    },
+    {
+      "id": "A4",
+      "name": "散点档案层",
+      "relative_position": "中庭东侧",
+      "purpose": "教授放与连的前置观察",
+      "status": "proposed"
+    },
+    {
+      "id": "A5",
+      "name": "点阵传播网",
+      "relative_position": "世界东南侧",
+      "purpose": "传播探索与终章综合测试",
+      "status": "proposed"
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "reveal",
+      "symbol": "显（1）",
+      "name": "显",
+      "room": "R01",
+      "order": 1,
+      "critical": true,
+      "requires_before": [],
+      "acquisition": "开场自动释放并记录；只显示固定轮廓，不生成地形。"
+    },
+    {
+      "id": "switch",
+      "symbol": "转（2）",
+      "name": "转",
+      "room": "R06",
+      "order": 2,
+      "critical": true,
+      "requires_before": [
+        "reveal"
+      ],
+      "acquisition": "在中空植物聆听并拾取。"
+    },
+    {
+      "id": "gather",
+      "symbol": "收（3）",
+      "name": "收",
+      "room": "R09",
+      "order": 3,
+      "critical": true,
+      "requires_before": [
+        "reveal",
+        "switch"
+      ],
+      "acquisition": "用转将两处机关切到与浅凹槽匹配的预设状态。"
+    },
+    {
+      "id": "scatter",
+      "symbol": "放（4）",
+      "name": "放",
+      "room": "R12",
+      "order": 4,
+      "critical": true,
+      "requires_before": [
+        "reveal",
+        "switch",
+        "gather"
+      ],
+      "acquisition": "先用显识别安全侧路后拾取，不要求先会放。"
+    },
+    {
+      "id": "connect",
+      "symbol": "连（5）",
+      "name": "连",
+      "room": "R16",
+      "order": 5,
+      "critical": true,
+      "requires_before": [
+        "reveal",
+        "switch",
+        "gather",
+        "scatter"
+      ],
+      "acquisition": "从放教学区走可往返路线到断裂双端；进入获取房不要求连。"
+    }
+  ],
+  "gates": [
+    {
+      "id": "K_SWITCH",
+      "requires": [
+        "switch"
+      ],
+      "first_critical_use": "E06",
+      "previews": [
+        {
+          "room": "R03",
+          "known": [
+            "reveal"
+          ]
+        },
+        {
+          "room": "R05",
+          "known": [
+            "reveal"
+          ]
+        }
+      ],
+      "signposting": "可提前看见闭合/开启两套轮廓；不封死入口主线。"
+    },
+    {
+      "id": "K_GATHER",
+      "requires": [
+        "gather"
+      ],
+      "first_critical_use": "E10",
+      "previews": [
+        {
+          "room": "R08",
+          "known": [
+            "reveal",
+            "switch"
+          ]
+        }
+      ],
+      "signposting": "可先看到浅凹槽与点簇，再回中庭。"
+    },
+    {
+      "id": "K_SCATTER",
+      "requires": [
+        "scatter"
+      ],
+      "first_critical_use": "E12",
+      "previews": [
+        {
+          "room": "R10",
+          "known": [
+            "reveal",
+            "switch",
+            "gather"
+          ]
+        }
+      ],
+      "signposting": "密集点堵住传播线，安全侧落脚与绕行线同屏可见。"
+    },
+    {
+      "id": "K_CONNECT",
+      "requires": [
+        "connect"
+      ],
+      "first_critical_use": "E16",
+      "previews": [
+        {
+          "room": "R13",
+          "known": [
+            "reveal",
+            "switch",
+            "gather",
+            "scatter"
+          ]
+        },
+        {
+          "room": "R15",
+          "known": [
+            "reveal",
+            "switch",
+            "gather",
+            "scatter"
+          ]
+        }
+      ],
+      "signposting": "断裂双端提前可见；R16获取连不依赖连。"
+    },
+    {
+      "id": "K_ALL",
+      "requires": [
+        "reveal",
+        "switch",
+        "gather",
+        "scatter",
+        "connect"
+      ],
+      "first_critical_use": "E21",
+      "previews": [
+        {
+          "room": "R05",
+          "known": [
+            "reveal"
+          ]
+        }
+      ],
+      "signposting": "中庭远眺终章多层结构；先提示后开放。"
+    },
+    {
+      "id": "K_ARCHIVE_LOOP",
+      "requires": [
+        "connect"
+      ],
+      "first_critical_use": null,
+      "optional": true,
+      "previews": [
+        {
+          "room": "R14",
+          "known": [
+            "reveal",
+            "switch",
+            "gather",
+            "scatter"
+          ]
+        }
+      ],
+      "signposting": "R14可提前看到折射书架另一侧的脉动；取得连后开启两端回访。"
+    },
+    {
+      "id": "K_DEEP_RETURN",
+      "requires": [
+        "reveal",
+        "switch",
+        "gather",
+        "scatter",
+        "connect"
+      ],
+      "first_critical_use": null,
+      "optional": true,
+      "previews": [
+        {
+          "room": "R05",
+          "known": [
+            "reveal"
+          ]
+        }
+      ],
+      "signposting": "中庭井沿可显现环形纹路；全部核心知识取得后，两侧回接门均可返回。"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "入口平台",
+      "area_id": "A1",
+      "position": {
+        "grid_x": 0,
+        "grid_y": 3,
+        "drawio_px": {
+          "x": 100,
+          "y": 480,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "安全起点；开场记录显。",
+      "pacing_beat": "teach",
+      "grants_knowledge": [
+        "reveal"
+      ],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [],
+      "recovery_and_return": "短跳失误回到同房安全小台。",
+      "region_id": "A1",
+      "region_name": "失谐岸线"
+    },
+    {
+      "id": "R02",
+      "name": "行者的初次指引",
+      "area_id": "A1",
+      "position": {
+        "grid_x": 1,
+        "grid_y": 3,
+        "drawio_px": {
+          "x": 350,
+          "y": 480,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "认识交互、施法器与陌生音型。",
+      "pacing_beat": "teach",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R01"
+      ],
+      "recovery_and_return": "对白可重复，不消耗资源。",
+      "region_id": "A1",
+      "region_name": "失谐岸线"
+    },
+    {
+      "id": "R03",
+      "name": "第一次显现",
+      "area_id": "A1",
+      "position": {
+        "grid_x": 2,
+        "grid_y": 3,
+        "drawio_px": {
+          "x": 600,
+          "y": 480,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "安全平台上使用显，验证只揭示固定轮廓。",
+      "pacing_beat": "teach",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R02"
+      ],
+      "recovery_and_return": "回安全平台即可重试。",
+      "region_id": "A1",
+      "region_name": "失谐岸线"
+    },
+    {
+      "id": "R04",
+      "name": "第二种轮廓",
+      "area_id": "A1",
+      "position": {
+        "grid_x": 3,
+        "grid_y": 3,
+        "drawio_px": {
+          "x": 850,
+          "y": 480,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "在低风险垂直错层辨认真实落脚点。",
+      "pacing_beat": "develop",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R03"
+      ],
+      "recovery_and_return": "失误落回同侧安全平台。",
+      "region_id": "A1",
+      "region_name": "失谐岸线"
+    },
+    {
+      "id": "R05",
+      "name": "到达中心区域",
+      "area_id": "A2",
+      "position": {
+        "grid_x": 4,
+        "grid_y": 3,
+        "drawio_px": {
+          "x": 1100,
+          "y": 480,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "主枢纽；安全观察状态门、密集封路和断端三向线索。",
+      "pacing_beat": "rest",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R04"
+      ],
+      "recovery_and_return": "设计建议：放置回访标记；不增加未定机关。",
+      "region_id": "A2",
+      "region_name": "共鸣中庭"
+    },
+    {
+      "id": "R06",
+      "name": "中空植物与符号二",
+      "area_id": "A2",
+      "position": {
+        "grid_x": 4,
+        "grid_y": 2,
+        "drawio_px": {
+          "x": 1100,
+          "y": 350,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "聆听并获得转；自然声源可重复检查。",
+      "pacing_beat": "acquire",
+      "grants_knowledge": [
+        "switch"
+      ],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R05"
+      ],
+      "recovery_and_return": "未拾取时可返回植物。",
+      "region_id": "A2",
+      "region_name": "共鸣中庭"
+    },
+    {
+      "id": "R07",
+      "name": "单独尝试换相",
+      "area_id": "A2",
+      "position": {
+        "grid_x": 5,
+        "grid_y": 3,
+        "drawio_px": {
+          "x": 1350,
+          "y": 480,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "安全单机关演奏转，学习可逆预设切换。",
+      "pacing_beat": "teach",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R06"
+      ],
+      "recovery_and_return": "可重演并切回任一状态。",
+      "region_id": "A2",
+      "region_name": "共鸣中庭"
+    },
+    {
+      "id": "R08",
+      "name": "双态回廊对照室",
+      "area_id": "A2",
+      "position": {
+        "grid_x": 6,
+        "grid_y": 3,
+        "drawio_px": {
+          "x": 1600,
+          "y": 480,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "比较两间短房的状态差异；观察盆地路线。",
+      "pacing_beat": "develop",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R07"
+      ],
+      "recovery_and_return": "点簇不会消失或封死出口。",
+      "region_id": "A2",
+      "region_name": "共鸣中庭"
+    },
+    {
+      "id": "R09",
+      "name": "发现符号三·收",
+      "area_id": "A3",
+      "position": {
+        "grid_x": 6,
+        "grid_y": 1,
+        "drawio_px": {
+          "x": 1600,
+          "y": 220,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "以转匹配两处浅凹槽并获得收。",
+      "pacing_beat": "acquire",
+      "grants_knowledge": [
+        "gather"
+      ],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R08"
+      ],
+      "recovery_and_return": "机关可逐个重演，不需要新能力。",
+      "region_id": "A3",
+      "region_name": "空鸣盆地"
+    },
+    {
+      "id": "R10",
+      "name": "收点基础练习",
+      "area_id": "A3",
+      "position": {
+        "grid_x": 7,
+        "grid_y": 1,
+        "drawio_px": {
+          "x": 1850,
+          "y": 220,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "安全静态点阵台练习收；可望见东侧密集封路。",
+      "pacing_beat": "teach",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R09"
+      ],
+      "recovery_and_return": "平整练习台，可重复尝试。",
+      "region_id": "A3",
+      "region_name": "空鸣盆地"
+    },
+    {
+      "id": "R11",
+      "name": "转与收的顺序",
+      "area_id": "A3",
+      "position": {
+        "grid_x": 7,
+        "grid_y": 2,
+        "drawio_px": {
+          "x": 1850,
+          "y": 350,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "先切换预设形态再聚合；检验两能力顺序。",
+      "pacing_beat": "test",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R10"
+      ],
+      "recovery_and_return": "状态可逆；完成后可开回中庭捷径。",
+      "region_id": "A3",
+      "region_name": "空鸣盆地"
+    },
+    {
+      "id": "R12",
+      "name": "发现符号四·放",
+      "area_id": "A4",
+      "position": {
+        "grid_x": 8,
+        "grid_y": 2,
+        "drawio_px": {
+          "x": 2100,
+          "y": 350,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "用显确认安全侧路并拾取放；进房不需放。",
+      "pacing_beat": "acquire",
+      "grants_knowledge": [
+        "scatter"
+      ],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R11"
+      ],
+      "recovery_and_return": "可沿原路返回R11。",
+      "region_id": "A4",
+      "region_name": "散点档案层"
+    },
+    {
+      "id": "R13",
+      "name": "单独试用放",
+      "area_id": "A4",
+      "position": {
+        "grid_x": 9,
+        "grid_y": 2,
+        "drawio_px": {
+          "x": 2350,
+          "y": 350,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "单目标测试放并清出传播路；远处可见断裂双端。",
+      "pacing_beat": "teach",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R12"
+      ],
+      "recovery_and_return": "失败可退回，不消耗能力。",
+      "region_id": "A4",
+      "region_name": "散点档案层"
+    },
+    {
+      "id": "R14",
+      "name": "放开后建立正确连接",
+      "area_id": "A4",
+      "position": {
+        "grid_x": 10,
+        "grid_y": 2,
+        "drawio_px": {
+          "x": 2600,
+          "y": 350,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "清除独立密结并辨认正确双端；不要求连。",
+      "pacing_beat": "develop",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R13"
+      ],
+      "recovery_and_return": "错误路仍可回退；不移除主桥。",
+      "region_id": "A4",
+      "region_name": "散点档案层"
+    },
+    {
+      "id": "R15",
+      "name": "返回侧视密集结区出口",
+      "area_id": "A4",
+      "position": {
+        "grid_x": 10,
+        "grid_y": 1,
+        "drawio_px": {
+          "x": 2600,
+          "y": 220,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "视角过渡缓冲，视线指向可达的断端遗迹。",
+      "pacing_beat": "transition",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R14"
+      ],
+      "recovery_and_return": "过渡锁输入；完成后可原路返回。",
+      "region_id": "A4",
+      "region_name": "散点档案层"
+    },
+    {
+      "id": "R16",
+      "name": "断裂双端",
+      "area_id": "A4",
+      "position": {
+        "grid_x": 11,
+        "grid_y": 1,
+        "drawio_px": {
+          "x": 2850,
+          "y": 220,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "观察同步锚点并获得连；获取不需连。",
+      "pacing_beat": "acquire",
+      "grants_knowledge": [
+        "connect"
+      ],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R15"
+      ],
+      "recovery_and_return": "安全地面，无单向坠落。",
+      "region_id": "A4",
+      "region_name": "散点档案层"
+    },
+    {
+      "id": "R17",
+      "name": "短距离连接",
+      "area_id": "A4",
+      "position": {
+        "grid_x": 12,
+        "grid_y": 1,
+        "drawio_px": {
+          "x": 3100,
+          "y": 220,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "相容近锚点练习连；不匹配噪点作安全干扰。",
+      "pacing_beat": "teach",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R16"
+      ],
+      "recovery_and_return": "失败可重演。",
+      "region_id": "A4",
+      "region_name": "散点档案层"
+    },
+    {
+      "id": "R18",
+      "name": "移动后连接",
+      "area_id": "A4",
+      "position": {
+        "grid_x": 12,
+        "grid_y": 2,
+        "drawio_px": {
+          "x": 3100,
+          "y": 350,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "先转选端点预设，再用连；开启两条捷径。",
+      "pacing_beat": "test",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R17"
+      ],
+      "recovery_and_return": "错误端点可逆切换，稳定轮廓可见。",
+      "region_id": "A4",
+      "region_name": "散点档案层"
+    },
+    {
+      "id": "R19",
+      "name": "视角转换：点阵网入口",
+      "area_id": "A5",
+      "position": {
+        "grid_x": 13,
+        "grid_y": 2,
+        "drawio_px": {
+          "x": 3350,
+          "y": 350,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "自动视角转换安全缓冲，不提供手动切换。",
+      "pacing_beat": "transition",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R18"
+      ],
+      "recovery_and_return": "过渡结束后恢复输入，返程门保持开放。",
+      "region_id": "A5",
+      "region_name": "点阵传播网"
+    },
+    {
+      "id": "R20",
+      "name": "点阵传播网",
+      "area_id": "A5",
+      "position": {
+        "grid_x": 14,
+        "grid_y": 3,
+        "drawio_px": {
+          "x": 3600,
+          "y": 480,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "探索传播路，选择继续终章或回接中庭；不盲猜。",
+      "pacing_beat": "explore",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R19"
+      ],
+      "recovery_and_return": "断点处声波衰减，可退回入口。",
+      "region_id": "A5",
+      "region_name": "点阵传播网"
+    },
+    {
+      "id": "R21",
+      "name": "回到中心",
+      "area_id": "A2",
+      "position": {
+        "grid_x": 7,
+        "grid_y": 4,
+        "drawio_px": {
+          "x": 1850,
+          "y": 610,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "点阵网回接厅，汇合已开路线并进入终章。",
+      "pacing_beat": "hub_return",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R20"
+      ],
+      "recovery_and_return": "回接廊双向，不消耗或清除能力。",
+      "region_id": "A2",
+      "region_name": "共鸣中庭"
+    },
+    {
+      "id": "R22",
+      "name": "综合机关第一阶段：显现与路径",
+      "area_id": "A5",
+      "position": {
+        "grid_x": 8,
+        "grid_y": 5,
+        "drawio_px": {
+          "x": 2100,
+          "y": 740,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "用显确认多层结构中的可行通路；底部安全。",
+      "pacing_beat": "combine",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R21"
+      ],
+      "recovery_and_return": "选错路只让声波在断点衰减。",
+      "region_id": "A5",
+      "region_name": "点阵传播网"
+    },
+    {
+      "id": "R23",
+      "name": "综合机关第二阶段：清出传播路",
+      "area_id": "A5",
+      "position": {
+        "grid_x": 9,
+        "grid_y": 5,
+        "drawio_px": {
+          "x": 2350,
+          "y": 740,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "用放打开独立侧边密结，保留主桥。",
+      "pacing_beat": "combine",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R22"
+      ],
+      "recovery_and_return": "错误目标可重新演奏。",
+      "region_id": "A5",
+      "region_name": "点阵传播网"
+    },
+    {
+      "id": "R24",
+      "name": "综合机关第三阶段：塑形并连接",
+      "area_id": "A5",
+      "position": {
+        "grid_x": 10,
+        "grid_y": 5,
+        "drawio_px": {
+          "x": 2600,
+          "y": 740,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "用转与收塑出锚点形态，再用连接桥。",
+      "pacing_beat": "combine",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R23"
+      ],
+      "recovery_and_return": "稳定前不启用碰撞；可切换重试。",
+      "region_id": "A5",
+      "region_name": "点阵传播网"
+    },
+    {
+      "id": "R25",
+      "name": "综合机关第四阶段：选择稳定状态",
+      "area_id": "A5",
+      "position": {
+        "grid_x": 11,
+        "grid_y": 5,
+        "drawio_px": {
+          "x": 2850,
+          "y": 740,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "先转到稳定端点，再连核心并开启捷径。",
+      "pacing_beat": "test",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R24"
+      ],
+      "recovery_and_return": "状态可逆，可回R24重看。",
+      "region_id": "A5",
+      "region_name": "点阵传播网"
+    },
+    {
+      "id": "R26",
+      "name": "终章：完成一次可读演奏",
+      "area_id": "A5",
+      "position": {
+        "grid_x": 12,
+        "grid_y": 5,
+        "drawio_px": {
+          "x": 3100,
+          "y": 740,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "短句显→转→收→连；侧边独立目标另用放。",
+      "pacing_beat": "finale",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R25"
+      ],
+      "recovery_and_return": "分段反馈，不重置已完成机关。",
+      "region_id": "A5",
+      "region_name": "点阵传播网"
+    },
+    {
+      "id": "R27",
+      "name": "结束与继续探索",
+      "area_id": "A5",
+      "position": {
+        "grid_x": 13,
+        "grid_y": 5,
+        "drawio_px": {
+          "x": 3350,
+          "y": 740,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "结尾与自由回访；释义假说可选。",
+      "pacing_beat": "postgame",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R26"
+      ],
+      "recovery_and_return": "机关状态保留，可返回世界。",
+      "region_id": "A5",
+      "region_name": "点阵传播网"
+    },
+    {
+      "id": "R28",
+      "name": "回音匣暗室",
+      "area_id": "A2",
+      "position": {
+        "grid_x": 5,
+        "grid_y": 4,
+        "drawio_px": {
+          "x": 1350,
+          "y": 610,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "隐藏房：显现静态墙纹后聆听环境回声并记入记录。",
+      "pacing_beat": "secret",
+      "grants_knowledge": [],
+      "optional": true,
+      "hidden": true,
+      "knowledge_visible_before_mastery": [
+        "R05"
+      ],
+      "recovery_and_return": "从显现入口双向出入；不放关键能力。",
+      "region_id": "A2",
+      "region_name": "共鸣中庭"
+    },
+    {
+      "id": "R29",
+      "name": "侧声收藏室",
+      "area_id": "A4",
+      "position": {
+        "grid_x": 9,
+        "grid_y": 1,
+        "drawio_px": {
+          "x": 2350,
+          "y": 220,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "可选侧支：放开侧边密结并记录额外环境音型。",
+      "pacing_beat": "optional",
+      "grants_knowledge": [],
+      "optional": true,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [
+        "R13"
+      ],
+      "recovery_and_return": "原路双向返回；奖励不含主线能力。",
+      "region_id": "A4",
+      "region_name": "散点档案层"
+    },
+    {
+      "id": "R30",
+      "name": "潮痕回声龛",
+      "area_id": "A1",
+      "region_id": "A1",
+      "region_name": "失谐岸线",
+      "position": {
+        "grid_x": 2,
+        "grid_y": 2,
+        "drawio_px": {
+          "x": 600,
+          "y": 350,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "隐藏回声支间；发现旧壁纹并记录额外环境音，不提供主线能力。",
+      "pacing_beat": "explore",
+      "grants_knowledge": [],
+      "optional": true,
+      "hidden": true,
+      "knowledge_visible_before_mastery": [],
+      "recovery_and_return": "双向通道；从入口可原路返回，不设置不可逆坠落。"
+    },
+    {
+      "id": "R31",
+      "name": "中庭下层拱廊",
+      "area_id": "A2",
+      "region_id": "A2",
+      "region_name": "共鸣中庭",
+      "position": {
+        "grid_x": 5,
+        "grid_y": 2,
+        "drawio_px": {
+          "x": 1350,
+          "y": 350,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "连接中庭与双态回廊的下层通路；转相门开启后形成第二条环线。",
+      "pacing_beat": "connect",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [],
+      "recovery_and_return": "双向通道；从入口可原路返回，不设置不可逆坠落。"
+    },
+    {
+      "id": "R32",
+      "name": "沉积回水室",
+      "area_id": "A3",
+      "region_id": "A3",
+      "region_name": "空鸣盆地",
+      "position": {
+        "grid_x": 7,
+        "grid_y": 0,
+        "drawio_px": {
+          "x": 1850,
+          "y": 90,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "收点盆地可选回水支间；观察点阵沉积与浅凹槽的另一种组合。",
+      "pacing_beat": "explore",
+      "grants_knowledge": [],
+      "optional": true,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [],
+      "recovery_and_return": "双向通道；从入口可原路返回，不设置不可逆坠落。"
+    },
+    {
+      "id": "R33",
+      "name": "盆地外沿弧廊",
+      "area_id": "A3",
+      "region_id": "A3",
+      "region_name": "空鸣盆地",
+      "position": {
+        "grid_x": 6,
+        "grid_y": 0,
+        "drawio_px": {
+          "x": 1600,
+          "y": 90,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "绕行盆地上沿，连接收点遗迹与顺序练习间，形成高低两路。",
+      "pacing_beat": "connect",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [],
+      "recovery_and_return": "双向通道；从入口可原路返回，不设置不可逆坠落。"
+    },
+    {
+      "id": "R34",
+      "name": "档案侧廊",
+      "area_id": "A4",
+      "region_id": "A4",
+      "region_name": "散点档案层",
+      "position": {
+        "grid_x": 8,
+        "grid_y": 3,
+        "drawio_px": {
+          "x": 2100,
+          "y": 480,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "连接放的教学区与档案深处的侧向路线；不承载新能力。",
+      "pacing_beat": "explore",
+      "grants_knowledge": [],
+      "optional": true,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [],
+      "recovery_and_return": "双向通道；从入口可原路返回，不设置不可逆坠落。"
+    },
+    {
+      "id": "R35",
+      "name": "折射书架暗线",
+      "area_id": "A4",
+      "region_id": "A4",
+      "region_name": "散点档案层",
+      "position": {
+        "grid_x": 11,
+        "grid_y": 3,
+        "drawio_px": {
+          "x": 2850,
+          "y": 480,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "连接档案层两端；取得连后开启，作为回访捷径。",
+      "pacing_beat": "master",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [],
+      "recovery_and_return": "双向通道；从入口可原路返回，不设置不可逆坠落。"
+    },
+    {
+      "id": "R36",
+      "name": "中继回廊",
+      "area_id": "A5",
+      "region_id": "A5",
+      "region_name": "点阵传播网",
+      "position": {
+        "grid_x": 11,
+        "grid_y": 4,
+        "drawio_px": {
+          "x": 2850,
+          "y": 610,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "点阵网与中心回接厅之间的中继房；同时接入档案层回环。",
+      "pacing_beat": "connect",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [],
+      "recovery_and_return": "双向通道；从入口可原路返回，不设置不可逆坠落。"
+    },
+    {
+      "id": "R37",
+      "name": "波纹分岔厅",
+      "area_id": "A5",
+      "region_id": "A5",
+      "region_name": "点阵传播网",
+      "position": {
+        "grid_x": 13,
+        "grid_y": 3,
+        "drawio_px": {
+          "x": 3350,
+          "y": 480,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "传播网外环分岔；分别通往主探索路径和终章外侧回路。",
+      "pacing_beat": "connect",
+      "grants_knowledge": [],
+      "optional": false,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [],
+      "recovery_and_return": "双向通道；从入口可原路返回，不设置不可逆坠落。"
+    },
+    {
+      "id": "R38",
+      "name": "低频共鸣池",
+      "area_id": "A5",
+      "region_id": "A5",
+      "region_name": "点阵传播网",
+      "position": {
+        "grid_x": 10,
+        "grid_y": 4,
+        "drawio_px": {
+          "x": 2600,
+          "y": 610,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "终章区域的可选低频支间；从清路段绕行至塑形段，记录环境变化。",
+      "pacing_beat": "explore",
+      "grants_knowledge": [],
+      "optional": true,
+      "hidden": false,
+      "knowledge_visible_before_mastery": [],
+      "recovery_and_return": "双向通道；从入口可原路返回，不设置不可逆坠落。"
+    },
+    {
+      "id": "R39",
+      "name": "环城回声井",
+      "area_id": "A2",
+      "region_id": "A2",
+      "region_name": "共鸣中庭",
+      "position": {
+        "grid_x": 6,
+        "grid_y": 5,
+        "drawio_px": {
+          "x": 1600,
+          "y": 740,
+          "width": 190,
+          "height": 78
+        }
+      },
+      "function": "隐藏的晚期开启回接通道，连接中心枢纽与回归厅，闭合远端路线。",
+      "pacing_beat": "master",
+      "grants_knowledge": [],
+      "optional": true,
+      "hidden": true,
+      "knowledge_visible_before_mastery": [],
+      "recovery_and_return": "双向通道；从入口可原路返回，不设置不可逆坠落。"
+    }
+  ],
+  "connections": [
+    {
+      "id": "E01",
+      "from": "R01",
+      "to": "R02",
+      "label": "短跳落点",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E02",
+      "from": "R02",
+      "to": "R03",
+      "label": "遗迹内侧",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E03",
+      "from": "R03",
+      "to": "R04",
+      "label": "显现轮廓后的短跳",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "reveal"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R03"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E04",
+      "from": "R04",
+      "to": "R05",
+      "label": "入口遗迹出口",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E05",
+      "from": "R05",
+      "to": "R06",
+      "label": "中空植物支路",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E06",
+      "from": "R06",
+      "to": "R07",
+      "label": "转相门",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "switch"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R05"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E07",
+      "from": "R07",
+      "to": "R08",
+      "label": "双态回廊",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "switch"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R03",
+        "R05"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E08",
+      "from": "R08",
+      "to": "R09",
+      "label": "盆地北侧台阶",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "switch"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R05"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E09",
+      "from": "R09",
+      "to": "R10",
+      "label": "凹槽练习台",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E10",
+      "from": "R10",
+      "to": "R11",
+      "label": "顺序测试门",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "gather"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R08"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E11",
+      "from": "R11",
+      "to": "R12",
+      "label": "密集区入口",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "gather"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R05",
+        "R10"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E12",
+      "from": "R12",
+      "to": "R13",
+      "label": "散点封路",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "scatter"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R10",
+        "R11"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E13",
+      "from": "R13",
+      "to": "R14",
+      "label": "分岔清理路",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "scatter"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R13"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E14",
+      "from": "R14",
+      "to": "R15",
+      "label": "视角缓冲廊",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "scatter"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E15",
+      "from": "R15",
+      "to": "R16",
+      "label": "断端观察路",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R13",
+        "R15"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E16",
+      "from": "R16",
+      "to": "R17",
+      "label": "短距锚点廊",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "connect"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R13",
+        "R15"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E17",
+      "from": "R17",
+      "to": "R18",
+      "label": "移动锚点练习",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "connect"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R16"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E18",
+      "from": "R18",
+      "to": "R19",
+      "label": "自动视角转换",
+      "connection_type": "automatic_transition",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "connect"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E19",
+      "from": "R19",
+      "to": "R37",
+      "label": "传播网外环入口",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E20",
+      "from": "R20",
+      "to": "R36",
+      "label": "点阵网中继通路",
+      "connection_type": "hub_return",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "connect"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": "建议作为双向环境回接廊；图上不按比例。"
+    },
+    {
+      "id": "E21",
+      "from": "R21",
+      "to": "R22",
+      "label": "终章入口封锁",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "reveal",
+        "switch",
+        "gather",
+        "scatter",
+        "connect"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R05"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E22",
+      "from": "R22",
+      "to": "R23",
+      "label": "多层轮廓路径",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "reveal"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E23",
+      "from": "R23",
+      "to": "R24",
+      "label": "清除侧边密结",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "scatter"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E24",
+      "from": "R24",
+      "to": "R25",
+      "label": "塑形并连接",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "switch",
+        "gather",
+        "connect"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E25",
+      "from": "R25",
+      "to": "R26",
+      "label": "稳定核心状态",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "reveal",
+        "switch",
+        "gather",
+        "scatter",
+        "connect"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E26",
+      "from": "R26",
+      "to": "R27",
+      "label": "继续探索出口",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E27",
+      "from": "R05",
+      "to": "R28",
+      "label": "显现墙纹后的隐藏门",
+      "connection_type": "hidden_passage",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "reveal"
+      ],
+      "shortcut": false,
+      "hidden": true,
+      "optional": true,
+      "opened_from": "R05",
+      "previewed_from": [
+        "R05"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E28",
+      "from": "R28",
+      "to": "R07",
+      "label": "暗室内侧回门",
+      "connection_type": "hidden_passage",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "switch"
+      ],
+      "shortcut": false,
+      "hidden": true,
+      "optional": true,
+      "opened_from": "R28",
+      "previewed_from": [],
+      "notes": "未取得转时可沿显现入口退回R05；取得后形成小环。"
+    },
+    {
+      "id": "E29",
+      "from": "R13",
+      "to": "R29",
+      "label": "侧声收藏支线",
+      "connection_type": "optional_branch",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "scatter"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": true,
+      "opened_from": "R13",
+      "previewed_from": [
+        "R13"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "S01",
+      "from": "R11",
+      "to": "R05",
+      "label": "盆地回中庭捷径",
+      "connection_type": "shortcut",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "switch",
+        "gather"
+      ],
+      "shortcut": true,
+      "hidden": false,
+      "optional": false,
+      "opened_from": "R11",
+      "previewed_from": [],
+      "notes": "完成顺序测试后开启，双向通行。"
+    },
+    {
+      "id": "S02",
+      "from": "R18",
+      "to": "R14",
+      "label": "档案层折返捷径",
+      "connection_type": "shortcut",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "connect"
+      ],
+      "shortcut": true,
+      "hidden": false,
+      "optional": false,
+      "opened_from": "R18",
+      "previewed_from": [],
+      "notes": "移动锚点稳定后开启，双向通行。"
+    },
+    {
+      "id": "S03",
+      "from": "R25",
+      "to": "R21",
+      "label": "核心回中庭捷径",
+      "connection_type": "shortcut",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "reveal",
+        "switch",
+        "gather",
+        "scatter",
+        "connect"
+      ],
+      "shortcut": true,
+      "hidden": false,
+      "optional": false,
+      "opened_from": "R25",
+      "previewed_from": [],
+      "notes": "核心稳定后开启，双向通行。"
+    },
+    {
+      "id": "S04",
+      "from": "R18",
+      "to": "R08",
+      "label": "深层中庭捷径",
+      "connection_type": "shortcut",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "scatter",
+        "connect"
+      ],
+      "shortcut": true,
+      "hidden": false,
+      "optional": false,
+      "opened_from": "R18",
+      "previewed_from": [],
+      "notes": "完成移动连接后开启，双向通行。"
+    },
+    {
+      "id": "E30",
+      "from": "R03",
+      "to": "R30",
+      "label": "显现潮痕后的暗缝",
+      "connection_type": "hidden_passage",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "reveal"
+      ],
+      "shortcut": false,
+      "hidden": true,
+      "optional": true,
+      "opened_from": "R03",
+      "previewed_from": [
+        "R03"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E31",
+      "from": "R30",
+      "to": "R04",
+      "label": "回到入口外沿",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": false,
+      "hidden": false,
+      "optional": true,
+      "opened_from": "R30",
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E32",
+      "from": "R05",
+      "to": "R31",
+      "label": "中庭下层入口",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E33",
+      "from": "R31",
+      "to": "R08",
+      "label": "双态门下层回廊",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "switch"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R05"
+      ],
+      "notes": "可从中庭一侧提前看见关闭的转相门。"
+    },
+    {
+      "id": "E34",
+      "from": "R10",
+      "to": "R32",
+      "label": "回水室窄阶",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "gather"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": true,
+      "opened_from": "R10",
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E35",
+      "from": "R32",
+      "to": "R09",
+      "label": "盆地遗迹侧门",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": false,
+      "hidden": false,
+      "optional": true,
+      "opened_from": "R32",
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E36",
+      "from": "R09",
+      "to": "R33",
+      "label": "盆地上沿入口",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E37",
+      "from": "R33",
+      "to": "R11",
+      "label": "顺序练习间上层门",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "gather"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [
+        "R09"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E38",
+      "from": "R12",
+      "to": "R34",
+      "label": "档案侧廊入口",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "scatter"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": true,
+      "opened_from": "R12",
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E39",
+      "from": "R34",
+      "to": "R14",
+      "label": "档案侧廊回接门",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "scatter"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": true,
+      "opened_from": "R34",
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E40",
+      "from": "R14",
+      "to": "R35",
+      "label": "折射书架门",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "connect"
+      ],
+      "shortcut": true,
+      "hidden": false,
+      "optional": false,
+      "opened_from": "R14",
+      "previewed_from": [
+        "R14"
+      ],
+      "notes": "取得连之前可从R14一侧观察门后的远端脉动。"
+    },
+    {
+      "id": "E41",
+      "from": "R35",
+      "to": "R18",
+      "label": "书架暗线出口",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": true,
+      "hidden": false,
+      "optional": false,
+      "opened_from": "R35",
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E42",
+      "from": "R36",
+      "to": "R21",
+      "label": "回接厅出口",
+      "connection_type": "hub_return",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "connect"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "S05",
+      "from": "R36",
+      "to": "R18",
+      "label": "中继回廊至档案层捷径",
+      "connection_type": "shortcut",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "connect"
+      ],
+      "shortcut": true,
+      "hidden": false,
+      "optional": false,
+      "opened_from": "R36",
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E43",
+      "from": "R37",
+      "to": "R20",
+      "label": "传播网主路线",
+      "connection_type": "walkway",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [],
+      "shortcut": false,
+      "hidden": false,
+      "optional": false,
+      "opened_from": null,
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E44",
+      "from": "R23",
+      "to": "R38",
+      "label": "共鸣池下行阶",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "scatter"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": true,
+      "opened_from": "R23",
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E45",
+      "from": "R38",
+      "to": "R24",
+      "label": "共鸣池上行门",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "switch",
+        "gather",
+        "connect"
+      ],
+      "shortcut": false,
+      "hidden": false,
+      "optional": true,
+      "opened_from": "R38",
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E46",
+      "from": "R05",
+      "to": "R39",
+      "label": "中庭井沿暗门",
+      "connection_type": "hidden_passage",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "reveal",
+        "switch",
+        "gather",
+        "scatter",
+        "connect"
+      ],
+      "shortcut": true,
+      "hidden": true,
+      "optional": true,
+      "opened_from": "R05",
+      "previewed_from": [
+        "R05"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "E47",
+      "from": "R39",
+      "to": "R21",
+      "label": "井底回接厅门",
+      "connection_type": "hidden_passage",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "reveal",
+        "switch",
+        "gather",
+        "scatter",
+        "connect"
+      ],
+      "shortcut": true,
+      "hidden": true,
+      "optional": true,
+      "opened_from": "R39",
+      "previewed_from": [],
+      "notes": ""
+    },
+    {
+      "id": "E48",
+      "from": "R37",
+      "to": "R22",
+      "label": "外环通向终章侧门",
+      "connection_type": "knowledge_gate",
+      "directionality": "bidirectional",
+      "one_way": false,
+      "requires_knowledge": [
+        "reveal",
+        "switch",
+        "gather",
+        "scatter",
+        "connect"
+      ],
+      "shortcut": true,
+      "hidden": false,
+      "optional": true,
+      "opened_from": null,
+      "previewed_from": [
+        "R37"
+      ],
+      "notes": "终章侧门；主路线仍可由R21进入。"
+    }
+  ],
+  "exploration_loops": [
+    {
+      "id": "L1",
+      "name": "中庭—盆地—中庭",
+      "cycle": [
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11",
+        "R05"
+      ],
+      "shortcut": "S01",
+      "shortcut_path": [
+        "S01"
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "档案层折返环",
+      "cycle": [
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R14"
+      ],
+      "shortcut": "S02",
+      "shortcut_path": [
+        "S02"
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "核心回归环",
+      "cycle": [
+        "R21",
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R21"
+      ],
+      "shortcut": "S03",
+      "shortcut_path": [
+        "S03"
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "深层—中庭回环",
+      "cycle": [
+        "R08",
+        "R09",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R08"
+      ],
+      "shortcut": "S04",
+      "shortcut_path": [
+        "S04"
+      ]
+    },
+    {
+      "id": "L5",
+      "name": "潮痕龛入口环",
+      "cycle": [
+        "R03",
+        "R30",
+        "R04",
+        "R03"
+      ],
+      "shortcut": null,
+      "unlock": "reveal",
+      "type": "secret_loop",
+      "closing_edge": "E30"
+    },
+    {
+      "id": "L6",
+      "name": "中庭下层环",
+      "cycle": [
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R31",
+        "R05"
+      ],
+      "shortcut": null,
+      "unlock": "switch",
+      "type": "regional_loop",
+      "closing_edge": "E33"
+    },
+    {
+      "id": "L7",
+      "name": "回水室小环",
+      "cycle": [
+        "R09",
+        "R10",
+        "R32",
+        "R09"
+      ],
+      "shortcut": null,
+      "unlock": "gather",
+      "type": "optional_loop",
+      "closing_edge": "E35"
+    },
+    {
+      "id": "L8",
+      "name": "盆地上沿环",
+      "cycle": [
+        "R09",
+        "R33",
+        "R11",
+        "R10",
+        "R09"
+      ],
+      "shortcut": null,
+      "unlock": "gather",
+      "type": "regional_loop",
+      "closing_edge": "E37"
+    },
+    {
+      "id": "L9",
+      "name": "档案折射环",
+      "cycle": [
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R35",
+        "R14"
+      ],
+      "shortcut": "E40",
+      "unlock": "connect",
+      "type": "shortcut_loop",
+      "shortcut_path": [
+        "E40",
+        "E41"
+      ]
+    },
+    {
+      "id": "L10",
+      "name": "档案—传播网环",
+      "cycle": [
+        "R18",
+        "R19",
+        "R37",
+        "R20",
+        "R36",
+        "R18"
+      ],
+      "shortcut": "S05",
+      "unlock": "connect",
+      "type": "cross_region_loop",
+      "shortcut_path": [
+        "S05"
+      ]
+    },
+    {
+      "id": "L11",
+      "name": "传播网—终章外环",
+      "cycle": [
+        "R19",
+        "R37",
+        "R22",
+        "R21",
+        "R36",
+        "R20",
+        "R37",
+        "R19"
+      ],
+      "shortcut": "E48",
+      "unlock": "all_known",
+      "type": "cross_region_loop",
+      "shortcut_path": [
+        "E48"
+      ]
+    },
+    {
+      "id": "L12",
+      "name": "低频池环",
+      "cycle": [
+        "R23",
+        "R38",
+        "R24",
+        "R23"
+      ],
+      "shortcut": null,
+      "unlock": "scatter_switch_gather_connect",
+      "type": "optional_loop",
+      "closing_edge": "E45"
+    },
+    {
+      "id": "L13",
+      "name": "中庭—回接井环",
+      "cycle": [
+        "R05",
+        "R39",
+        "R21",
+        "R36",
+        "R20",
+        "R37",
+        "R19",
+        "R18",
+        "R08",
+        "R31",
+        "R05"
+      ],
+      "shortcut": "E46",
+      "unlock": "all_known",
+      "type": "late_world_loop",
+      "shortcut_path": [
+        "E46",
+        "E47"
+      ]
+    }
+  ],
+  "early_sightlines": [
+    {
+      "from": "R03",
+      "target": "K_SWITCH",
+      "clue": "远处门体有闭合/开启两种轮廓。"
+    },
+    {
+      "from": "R05",
+      "target": "K_ALL",
+      "clue": "中庭三向出口显示稳定轮廓、移动点簇、断裂脉动。"
+    },
+    {
+      "from": "R08",
+      "target": "K_GATHER",
+      "clue": "浅凹槽和点簇可见，回中庭路线畅通。"
+    },
+    {
+      "from": "R10",
+      "target": "K_SCATTER",
+      "clue": "密集点堵路，安全绕行路径可读。"
+    },
+    {
+      "from": "R13",
+      "target": "K_CONNECT",
+      "clue": "两端同步回应，断口遗迹可见。"
+    },
+    {
+      "from": "R21",
+      "target": "K_ALL",
+      "clue": "终章多层结构与稳定轮廓可见。"
+    },
+    {
+      "from": "R14",
+      "target": "K_ARCHIVE_LOOP",
+      "clue": "书架尽头有与R18相同的脉动，门尚未响应。",
+      "before_knowledge": "connect"
+    },
+    {
+      "from": "R05",
+      "target": "K_DEEP_RETURN",
+      "clue": "地面可显现环状井纹，但井门仍闭合。",
+      "before_knowledge": "switch,gather,scatter,connect"
+    }
+  ],
+  "layout": {
+    "coordinate_system": "abstract room-grid",
+    "grid": {
+      "step_x": 250,
+      "step_y": 130,
+      "room_w": 190,
+      "room_h": 78,
+      "origin_x": 100,
+      "origin_y": 90,
+      "unit": "abstract room-grid cell; not gameplay meters"
+    },
+    "region_arrangement": {
+      "A1": "西侧入口遗迹，含一条显现后可发现的隐秘小环",
+      "A2": "中西部枢纽及下层回接井道",
+      "A3": "中庭北侧盆地，形成浅层与外沿双环",
+      "A4": "中庭东侧档案层，取得连后开启侧向回访线",
+      "A5": "东南传播网及终章外环，与档案层和回接厅交织"
+    },
+    "diagram_room_size_px": [
+      190,
+      78
+    ]
+  },
+  "critical_path": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "R17",
+    "R18",
+    "R19",
+    "R37",
+    "R20",
+    "R36",
+    "R21",
+    "R22",
+    "R23",
+    "R24",
+    "R25",
+    "R26",
+    "R27"
+  ],
+  "progression_assumptions": [
+    "显在开场自动取得。",
+    "转、收、放、连分别在R06、R09、R12、R16取得。",
+    "可选房奖励不含主线关键能力。",
+    "所有通道双向，不使用不可逆单向坠落。"
+  ],
+  "validation": {
+    "scope": "39-room topology, knowledge gates, route cycles, diagram node/edge alignment and abstract 2D room positions; not Unity jump-geometry playtesting",
+    "room_count": 39,
+    "region_count": 5,
+    "connection_count": 53,
+    "exploration_loop_count": 13,
+    "all_rooms_reachable": true,
+    "reachable_room_count": 39,
+    "all_critical_path_rooms_reachable": true,
+    "unreachable_critical_path_rooms": [],
+    "all_five_known_abilities_reachable": true,
+    "knowledge_acquisition_checks": [
+      {
+        "knowledge": "reveal",
+        "room": "R01",
+        "reachable": true,
+        "self_locked": false
+      },
+      {
+        "knowledge": "switch",
+        "room": "R06",
+        "reachable": true,
+        "self_locked": false
+      },
+      {
+        "knowledge": "gather",
+        "room": "R09",
+        "reachable": true,
+        "self_locked": false
+      },
+      {
+        "knowledge": "scatter",
+        "room": "R12",
+        "reachable": true,
+        "self_locked": false
+      },
+      {
+        "knowledge": "connect",
+        "room": "R16",
+        "reachable": true,
+        "self_locked": false
+      }
+    ],
+    "room_rectangle_overlap_count": 0,
+    "room_rectangle_overlaps": [],
+    "all_exploration_loops_complete": true,
+    "loop_checks": [
+      {
+        "id": "L1",
+        "name": "中庭—盆地—中庭",
+        "complete": true
+      },
+      {
+        "id": "L2",
+        "name": "档案层折返环",
+        "complete": true
+      },
+      {
+        "id": "L3",
+        "name": "核心回归环",
+        "complete": true
+      },
+      {
+        "id": "L4",
+        "name": "深层—中庭回环",
+        "complete": true
+      },
+      {
+        "id": "L5",
+        "name": "潮痕龛入口环",
+        "complete": true
+      },
+      {
+        "id": "L6",
+        "name": "中庭下层环",
+        "complete": true
+      },
+      {
+        "id": "L7",
+        "name": "回水室小环",
+        "complete": true
+      },
+      {
+        "id": "L8",
+        "name": "盆地上沿环",
+        "complete": true
+      },
+      {
+        "id": "L9",
+        "name": "档案折射环",
+        "complete": true
+      },
+      {
+        "id": "L10",
+        "name": "档案—传播网环",
+        "complete": true
+      },
+      {
+        "id": "L11",
+        "name": "传播网—终章外环",
+        "complete": true
+      },
+      {
+        "id": "L12",
+        "name": "低频池环",
+        "complete": true
+      },
+      {
+        "id": "L13",
+        "name": "中庭—回接井环",
+        "complete": true
+      }
+    ],
+    "all_connections_bidirectional": true,
+    "drawio_room_nodes": 39,
+    "drawio_edges": 53,
+    "drawio_geometry_mismatches": [],
+    "drawio_edge_mismatches": [],
+    "softlock_policy": "所有设计通道双向；不新增能力；隐藏/可选房均有返回路径；新增捷径仅缩短回访路线，不作为主线必经条件。",
+    "shortcut_loop_count": 8,
+    "shortcut_path_checks": [
+      {
+        "loop_id": "L1",
+        "path": [
+          "S01"
+        ],
+        "continuous": true,
+        "all_edges_marked_shortcut": true
+      },
+      {
+        "loop_id": "L2",
+        "path": [
+          "S02"
+        ],
+        "continuous": true,
+        "all_edges_marked_shortcut": true
+      },
+      {
+        "loop_id": "L3",
+        "path": [
+          "S03"
+        ],
+        "continuous": true,
+        "all_edges_marked_shortcut": true
+      },
+      {
+        "loop_id": "L4",
+        "path": [
+          "S04"
+        ],
+        "continuous": true,
+        "all_edges_marked_shortcut": true
+      },
+      {
+        "loop_id": "L9",
+        "path": [
+          "E40",
+          "E41"
+        ],
+        "continuous": true,
+        "all_edges_marked_shortcut": true
+      },
+      {
+        "loop_id": "L10",
+        "path": [
+          "S05"
+        ],
+        "continuous": true,
+        "all_edges_marked_shortcut": true
+      },
+      {
+        "loop_id": "L11",
+        "path": [
+          "E48"
+        ],
+        "continuous": true,
+        "all_edges_marked_shortcut": true
+      },
+      {
+        "loop_id": "L13",
+        "path": [
+          "E46",
+          "E47"
+        ],
+        "continuous": true,
+        "all_edges_marked_shortcut": true
+      }
+    ]
+  }
+}

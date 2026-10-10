@@ -1,0 +1,3770 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 10
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 2
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 1
+    m_PVRFilteringGaussRadiusAO: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 3
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &12989515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 12989516}
+  - component: {fileID: 12989517}
+  m_Layer: 0
+  m_Name: "R36 - \u4E2D\u7EE7\u56DE\u5ECA"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &12989516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12989515}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: -1.95, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &12989517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12989515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R36
+  roomName: "\u4E2D\u7EE7\u56DE\u5ECA"
+  regionId: A5
+  regionName: "\u70B9\u9635\u4F20\u64AD\u7F51"
+  function: "\u70B9\u9635\u7F51\u4E0E\u4E2D\u5FC3\u56DE\u63A5\u5385\u4E4B\u95F4\u7684\u4E2D\u7EE7\u623F\uFF1B\u540C\u65F6\u63A5\u5165\u6863\u6848\u5C42\u56DE\u73AF\u3002"
+  pacingBeat: connect
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery: []
+  recoveryAndReturn: "\u53CC\u5411\u901A\u9053\uFF1B\u4ECE\u5165\u53E3\u53EF\u539F\u8DEF\u8FD4\u56DE\uFF0C\u4E0D\u8BBE\u7F6E\u4E0D\u53EF\u9006\u5760\u843D\u3002"
+  connections:
+  - id: E42
+    targetRoom: {fileID: 2038582786}
+    label: "\u56DE\u63A5\u5385\u51FA\u53E3"
+    kind: 4
+    sourceType: hub_return
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - connect
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+  - id: S05
+    targetRoom: {fileID: 1633589058}
+    label: "\u4E2D\u7EE7\u56DE\u5ECA\u81F3\u6863\u6848\u5C42\u6377\u5F84"
+    kind: 3
+    sourceType: shortcut
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - connect
+    shortcut: 1
+    hidden: 0
+    optional: 0
+    openedFrom: R36
+    previewedFrom: []
+    notes: 
+--- !u!1 &60746891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 60746892}
+  - component: {fileID: 60746893}
+  m_Layer: 0
+  m_Name: "R34 - \u6863\u6848\u4FA7\u5ECA"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &60746892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60746891}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5, y: -0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &60746893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60746891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R34
+  roomName: "\u6863\u6848\u4FA7\u5ECA"
+  regionId: A4
+  regionName: "\u6563\u70B9\u6863\u6848\u5C42"
+  function: "\u8FDE\u63A5\u653E\u7684\u6559\u5B66\u533A\u4E0E\u6863\u6848\u6DF1\u5904\u7684\u4FA7\u5411\u8DEF\u7EBF\uFF1B\u4E0D\u627F\u8F7D\u65B0\u80FD\u529B\u3002"
+  pacingBeat: explore
+  grantsKnowledge: []
+  optional: 1
+  hidden: 0
+  knowledgeVisibleBeforeMastery: []
+  recoveryAndReturn: "\u53CC\u5411\u901A\u9053\uFF1B\u4ECE\u5165\u53E3\u53EF\u539F\u8DEF\u8FD4\u56DE\uFF0C\u4E0D\u8BBE\u7F6E\u4E0D\u53EF\u9006\u5760\u843D\u3002"
+  connections:
+  - id: E39
+    targetRoom: {fileID: 1286651767}
+    label: "\u6863\u6848\u4FA7\u5ECA\u56DE\u63A5\u95E8"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - scatter
+    shortcut: 0
+    hidden: 0
+    optional: 1
+    openedFrom: R34
+    previewedFrom: []
+    notes: 
+--- !u!1 &140406276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 140406277}
+  m_Layer: 0
+  m_Name: Rooms
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &140406277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140406276}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1625277740}
+  - {fileID: 2124565359}
+  - {fileID: 1712251837}
+  - {fileID: 471764715}
+  - {fileID: 422636132}
+  - {fileID: 477137028}
+  - {fileID: 504138962}
+  - {fileID: 1200112756}
+  - {fileID: 442758347}
+  - {fileID: 187771371}
+  - {fileID: 1119059423}
+  - {fileID: 353965537}
+  - {fileID: 2138949578}
+  - {fileID: 1286651766}
+  - {fileID: 1505875867}
+  - {fileID: 1565977350}
+  - {fileID: 172435238}
+  - {fileID: 1633589057}
+  - {fileID: 964148354}
+  - {fileID: 525927412}
+  - {fileID: 2038582785}
+  - {fileID: 504945955}
+  - {fileID: 1818840126}
+  - {fileID: 1120177965}
+  - {fileID: 1259703565}
+  - {fileID: 767293198}
+  - {fileID: 881016834}
+  - {fileID: 721705874}
+  - {fileID: 1127526290}
+  - {fileID: 841314445}
+  - {fileID: 1177237111}
+  - {fileID: 503231683}
+  - {fileID: 749447537}
+  - {fileID: 60746892}
+  - {fileID: 1257389973}
+  - {fileID: 12989516}
+  - {fileID: 748709720}
+  - {fileID: 156766143}
+  - {fileID: 1431561652}
+  m_Father: {fileID: 2041228294}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &156766142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 156766143}
+  - component: {fileID: 156766144}
+  m_Layer: 0
+  m_Name: "R38 - \u4F4E\u9891\u5171\u9E23\u6C60"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &156766143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156766142}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.5, y: -1.95, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &156766144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156766142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R38
+  roomName: "\u4F4E\u9891\u5171\u9E23\u6C60"
+  regionId: A5
+  regionName: "\u70B9\u9635\u4F20\u64AD\u7F51"
+  function: "\u7EC8\u7AE0\u533A\u57DF\u7684\u53EF\u9009\u4F4E\u9891\u652F\u95F4\uFF1B\u4ECE\u6E05\u8DEF\u6BB5\u7ED5\u884C\u81F3\u5851\u5F62\u6BB5\uFF0C\u8BB0\u5F55\u73AF\u5883\u53D8\u5316\u3002"
+  pacingBeat: explore
+  grantsKnowledge: []
+  optional: 1
+  hidden: 0
+  knowledgeVisibleBeforeMastery: []
+  recoveryAndReturn: "\u53CC\u5411\u901A\u9053\uFF1B\u4ECE\u5165\u53E3\u53EF\u539F\u8DEF\u8FD4\u56DE\uFF0C\u4E0D\u8BBE\u7F6E\u4E0D\u53EF\u9006\u5760\u843D\u3002"
+  connections:
+  - id: E45
+    targetRoom: {fileID: 1120177966}
+    label: "\u5171\u9E23\u6C60\u4E0A\u884C\u95E8"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - switch
+    - gather
+    - connect
+    shortcut: 0
+    hidden: 0
+    optional: 1
+    openedFrom: R38
+    previewedFrom: []
+    notes: 
+--- !u!1 &172435237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 172435238}
+  - component: {fileID: 172435239}
+  m_Layer: 0
+  m_Name: "R17 - \u77ED\u8DDD\u79BB\u8FDE\u63A5"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &172435238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172435237}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.5, y: 1.95, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &172435239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172435237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R17
+  roomName: "\u77ED\u8DDD\u79BB\u8FDE\u63A5"
+  regionId: A4
+  regionName: "\u6563\u70B9\u6863\u6848\u5C42"
+  function: "\u76F8\u5BB9\u8FD1\u951A\u70B9\u7EC3\u4E60\u8FDE\uFF1B\u4E0D\u5339\u914D\u566A\u70B9\u4F5C\u5B89\u5168\u5E72\u6270\u3002"
+  pacingBeat: teach
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R16
+  recoveryAndReturn: "\u5931\u8D25\u53EF\u91CD\u6F14\u3002"
+  connections:
+  - id: E17
+    targetRoom: {fileID: 1633589058}
+    label: "\u79FB\u52A8\u951A\u70B9\u7EC3\u4E60"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - connect
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R16
+    notes: 
+--- !u!1 &187771370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187771371}
+  - component: {fileID: 187771372}
+  m_Layer: 0
+  m_Name: "R10 - \u6536\u70B9\u57FA\u7840\u7EC3\u4E60"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &187771371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187771370}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.95, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &187771372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187771370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R10
+  roomName: "\u6536\u70B9\u57FA\u7840\u7EC3\u4E60"
+  regionId: A3
+  regionName: "\u7A7A\u9E23\u76C6\u5730"
+  function: "\u5B89\u5168\u9759\u6001\u70B9\u9635\u53F0\u7EC3\u4E60\u6536\uFF1B\u53EF\u671B\u89C1\u4E1C\u4FA7\u5BC6\u96C6\u5C01\u8DEF\u3002"
+  pacingBeat: teach
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R09
+  recoveryAndReturn: "\u5E73\u6574\u7EC3\u4E60\u53F0\uFF0C\u53EF\u91CD\u590D\u5C1D\u8BD5\u3002"
+  connections:
+  - id: E10
+    targetRoom: {fileID: 1119059424}
+    label: "\u987A\u5E8F\u6D4B\u8BD5\u95E8"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - gather
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R08
+    notes: 
+  - id: E34
+    targetRoom: {fileID: 503231684}
+    label: "\u56DE\u6C34\u5BA4\u7A84\u9636"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - gather
+    shortcut: 0
+    hidden: 0
+    optional: 1
+    openedFrom: R10
+    previewedFrom: []
+    notes: 
+--- !u!1 &353965536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 353965537}
+  - component: {fileID: 353965538}
+  m_Layer: 0
+  m_Name: "R12 - \u53D1\u73B0\u7B26\u53F7\u56DB\xB7\u653E"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &353965537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353965536}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5, y: 0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &353965538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353965536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R12
+  roomName: "\u53D1\u73B0\u7B26\u53F7\u56DB\xB7\u653E"
+  regionId: A4
+  regionName: "\u6563\u70B9\u6863\u6848\u5C42"
+  function: "\u7528\u663E\u786E\u8BA4\u5B89\u5168\u4FA7\u8DEF\u5E76\u62FE\u53D6\u653E\uFF1B\u8FDB\u623F\u4E0D\u9700\u653E\u3002"
+  pacingBeat: acquire
+  grantsKnowledge:
+  - scatter
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R11
+  recoveryAndReturn: "\u53EF\u6CBF\u539F\u8DEF\u8FD4\u56DER11\u3002"
+  connections:
+  - id: E12
+    targetRoom: {fileID: 2138949579}
+    label: "\u6563\u70B9\u5C01\u8DEF"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - scatter
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R10
+    - R11
+    notes: 
+  - id: E38
+    targetRoom: {fileID: 60746893}
+    label: "\u6863\u6848\u4FA7\u5ECA\u5165\u53E3"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - scatter
+    shortcut: 0
+    hidden: 0
+    optional: 1
+    openedFrom: R12
+    previewedFrom: []
+    notes: 
+--- !u!1 &422636131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422636132}
+  - component: {fileID: 422636133}
+  m_Layer: 0
+  m_Name: "R05 - \u5230\u8FBE\u4E2D\u5FC3\u533A\u57DF"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &422636132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422636131}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.5, y: -0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &422636133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422636131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R05
+  roomName: "\u5230\u8FBE\u4E2D\u5FC3\u533A\u57DF"
+  regionId: A2
+  regionName: "\u5171\u9E23\u4E2D\u5EAD"
+  function: "\u4E3B\u67A2\u7EBD\uFF1B\u5B89\u5168\u89C2\u5BDF\u72B6\u6001\u95E8\u3001\u5BC6\u96C6\u5C01\u8DEF\u548C\u65AD\u7AEF\u4E09\u5411\u7EBF\u7D22\u3002"
+  pacingBeat: rest
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R04
+  recoveryAndReturn: "\u8BBE\u8BA1\u5EFA\u8BAE\uFF1A\u653E\u7F6E\u56DE\u8BBF\u6807\u8BB0\uFF1B\u4E0D\u589E\u52A0\u672A\u5B9A\u673A\u5173\u3002"
+  connections:
+  - id: E05
+    targetRoom: {fileID: 477137029}
+    label: "\u4E2D\u7A7A\u690D\u7269\u652F\u8DEF"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+  - id: E27
+    targetRoom: {fileID: 721705875}
+    label: "\u663E\u73B0\u5899\u7EB9\u540E\u7684\u9690\u85CF\u95E8"
+    kind: 2
+    sourceType: hidden_passage
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - reveal
+    shortcut: 0
+    hidden: 1
+    optional: 1
+    openedFrom: R05
+    previewedFrom:
+    - R05
+    notes: 
+  - id: E32
+    targetRoom: {fileID: 1177237112}
+    label: "\u4E2D\u5EAD\u4E0B\u5C42\u5165\u53E3"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+  - id: E46
+    targetRoom: {fileID: 1431561651}
+    label: "\u4E2D\u5EAD\u4E95\u6CBF\u6697\u95E8"
+    kind: 2
+    sourceType: hidden_passage
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - reveal
+    - switch
+    - gather
+    - scatter
+    - connect
+    shortcut: 1
+    hidden: 1
+    optional: 1
+    openedFrom: R05
+    previewedFrom:
+    - R05
+    notes: 
+--- !u!1 &442758346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442758347}
+  - component: {fileID: 442758348}
+  m_Layer: 0
+  m_Name: "R09 - \u53D1\u73B0\u7B26\u53F7\u4E09\xB7\u6536"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &442758347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442758346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5, y: 1.95, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &442758348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442758346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R09
+  roomName: "\u53D1\u73B0\u7B26\u53F7\u4E09\xB7\u6536"
+  regionId: A3
+  regionName: "\u7A7A\u9E23\u76C6\u5730"
+  function: "\u4EE5\u8F6C\u5339\u914D\u4E24\u5904\u6D45\u51F9\u69FD\u5E76\u83B7\u5F97\u6536\u3002"
+  pacingBeat: acquire
+  grantsKnowledge:
+  - gather
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R08
+  recoveryAndReturn: "\u673A\u5173\u53EF\u9010\u4E2A\u91CD\u6F14\uFF0C\u4E0D\u9700\u8981\u65B0\u80FD\u529B\u3002"
+  connections:
+  - id: E09
+    targetRoom: {fileID: 187771372}
+    label: "\u51F9\u69FD\u7EC3\u4E60\u53F0"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+  - id: E36
+    targetRoom: {fileID: 749447538}
+    label: "\u76C6\u5730\u4E0A\u6CBF\u5165\u53E3"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+--- !u!1 &471764714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471764715}
+  - component: {fileID: 471764716}
+  m_Layer: 0
+  m_Name: "R04 - \u7B2C\u4E8C\u79CD\u8F6E\u5ED3"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471764715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471764714}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10, y: -0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &471764716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471764714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R04
+  roomName: "\u7B2C\u4E8C\u79CD\u8F6E\u5ED3"
+  regionId: A1
+  regionName: "\u5931\u8C10\u5CB8\u7EBF"
+  function: "\u5728\u4F4E\u98CE\u9669\u5782\u76F4\u9519\u5C42\u8FA8\u8BA4\u771F\u5B9E\u843D\u811A\u70B9\u3002"
+  pacingBeat: develop
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R03
+  recoveryAndReturn: "\u5931\u8BEF\u843D\u56DE\u540C\u4FA7\u5B89\u5168\u5E73\u53F0\u3002"
+  connections:
+  - id: E04
+    targetRoom: {fileID: 422636133}
+    label: "\u5165\u53E3\u9057\u8FF9\u51FA\u53E3"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+--- !u!1 &477137027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477137028}
+  - component: {fileID: 477137029}
+  m_Layer: 0
+  m_Name: "R06 - \u4E2D\u7A7A\u690D\u7269\u4E0E\u7B26\u53F7\u4E8C"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &477137028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477137027}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.5, y: 0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &477137029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477137027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R06
+  roomName: "\u4E2D\u7A7A\u690D\u7269\u4E0E\u7B26\u53F7\u4E8C"
+  regionId: A2
+  regionName: "\u5171\u9E23\u4E2D\u5EAD"
+  function: "\u8046\u542C\u5E76\u83B7\u5F97\u8F6C\uFF1B\u81EA\u7136\u58F0\u6E90\u53EF\u91CD\u590D\u68C0\u67E5\u3002"
+  pacingBeat: acquire
+  grantsKnowledge:
+  - switch
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R05
+  recoveryAndReturn: "\u672A\u62FE\u53D6\u65F6\u53EF\u8FD4\u56DE\u690D\u7269\u3002"
+  connections:
+  - id: E06
+    targetRoom: {fileID: 504138963}
+    label: "\u8F6C\u76F8\u95E8"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - switch
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R05
+    notes: 
+--- !u!1 &503231682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 503231683}
+  - component: {fileID: 503231684}
+  m_Layer: 0
+  m_Name: "R32 - \u6C89\u79EF\u56DE\u6C34\u5BA4"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &503231683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503231682}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.25, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &503231684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503231682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R32
+  roomName: "\u6C89\u79EF\u56DE\u6C34\u5BA4"
+  regionId: A3
+  regionName: "\u7A7A\u9E23\u76C6\u5730"
+  function: "\u6536\u70B9\u76C6\u5730\u53EF\u9009\u56DE\u6C34\u652F\u95F4\uFF1B\u89C2\u5BDF\u70B9\u9635\u6C89\u79EF\u4E0E\u6D45\u51F9\u69FD\u7684\u53E6\u4E00\u79CD\u7EC4\u5408\u3002"
+  pacingBeat: explore
+  grantsKnowledge: []
+  optional: 1
+  hidden: 0
+  knowledgeVisibleBeforeMastery: []
+  recoveryAndReturn: "\u53CC\u5411\u901A\u9053\uFF1B\u4ECE\u5165\u53E3\u53EF\u539F\u8DEF\u8FD4\u56DE\uFF0C\u4E0D\u8BBE\u7F6E\u4E0D\u53EF\u9006\u5760\u843D\u3002"
+  connections:
+  - id: E35
+    targetRoom: {fileID: 442758348}
+    label: "\u76C6\u5730\u9057\u8FF9\u4FA7\u95E8"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 0
+    hidden: 0
+    optional: 1
+    openedFrom: R32
+    previewedFrom: []
+    notes: 
+--- !u!1 &504138961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 504138962}
+  - component: {fileID: 504138963}
+  m_Layer: 0
+  m_Name: "R07 - \u5355\u72EC\u5C1D\u8BD5\u6362\u76F8"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &504138962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504138961}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: -0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &504138963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504138961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R07
+  roomName: "\u5355\u72EC\u5C1D\u8BD5\u6362\u76F8"
+  regionId: A2
+  regionName: "\u5171\u9E23\u4E2D\u5EAD"
+  function: "\u5B89\u5168\u5355\u673A\u5173\u6F14\u594F\u8F6C\uFF0C\u5B66\u4E60\u53EF\u9006\u9884\u8BBE\u5207\u6362\u3002"
+  pacingBeat: teach
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R06
+  recoveryAndReturn: "\u53EF\u91CD\u6F14\u5E76\u5207\u56DE\u4EFB\u4E00\u72B6\u6001\u3002"
+  connections:
+  - id: E07
+    targetRoom: {fileID: 1200112757}
+    label: "\u53CC\u6001\u56DE\u5ECA"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - switch
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R03
+    - R05
+    notes: 
+--- !u!1 &504945954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 504945955}
+  - component: {fileID: 504945956}
+  m_Layer: 0
+  m_Name: "R22 - \u7EFC\u5408\u673A\u5173\u7B2C\u4E00\u9636\u6BB5\uFF1A\u663E\u73B0\u4E0E\u8DEF\u5F84"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &504945955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504945954}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5, y: -3.25, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &504945956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504945954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R22
+  roomName: "\u7EFC\u5408\u673A\u5173\u7B2C\u4E00\u9636\u6BB5\uFF1A\u663E\u73B0\u4E0E\u8DEF\u5F84"
+  regionId: A5
+  regionName: "\u70B9\u9635\u4F20\u64AD\u7F51"
+  function: "\u7528\u663E\u786E\u8BA4\u591A\u5C42\u7ED3\u6784\u4E2D\u7684\u53EF\u884C\u901A\u8DEF\uFF1B\u5E95\u90E8\u5B89\u5168\u3002"
+  pacingBeat: combine
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R21
+  recoveryAndReturn: "\u9009\u9519\u8DEF\u53EA\u8BA9\u58F0\u6CE2\u5728\u65AD\u70B9\u8870\u51CF\u3002"
+  connections:
+  - id: E22
+    targetRoom: {fileID: 1818840127}
+    label: "\u591A\u5C42\u8F6E\u5ED3\u8DEF\u5F84"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - reveal
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+--- !u!1 &525927411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 525927412}
+  - component: {fileID: 525927413}
+  m_Layer: 0
+  m_Name: "R20 - \u70B9\u9635\u4F20\u64AD\u7F51"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &525927412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525927411}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.5, y: -0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &525927413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525927411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R20
+  roomName: "\u70B9\u9635\u4F20\u64AD\u7F51"
+  regionId: A5
+  regionName: "\u70B9\u9635\u4F20\u64AD\u7F51"
+  function: "\u63A2\u7D22\u4F20\u64AD\u8DEF\uFF0C\u9009\u62E9\u7EE7\u7EED\u7EC8\u7AE0\u6216\u56DE\u63A5\u4E2D\u5EAD\uFF1B\u4E0D\u76F2\u731C\u3002"
+  pacingBeat: explore
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R19
+  recoveryAndReturn: "\u65AD\u70B9\u5904\u58F0\u6CE2\u8870\u51CF\uFF0C\u53EF\u9000\u56DE\u5165\u53E3\u3002"
+  connections:
+  - id: E20
+    targetRoom: {fileID: 12989517}
+    label: "\u70B9\u9635\u7F51\u4E2D\u7EE7\u901A\u8DEF"
+    kind: 4
+    sourceType: hub_return
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - connect
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: "\u5EFA\u8BAE\u4F5C\u4E3A\u53CC\u5411\u73AF\u5883\u56DE\u63A5\u5ECA\uFF1B\u56FE\u4E0A\u4E0D\u6309\u6BD4\u4F8B\u3002"
+--- !u!1 &721705873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 721705874}
+  - component: {fileID: 721705875}
+  m_Layer: 0
+  m_Name: "R28 - \u56DE\u97F3\u5323\u6697\u5BA4"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &721705874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721705873}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: -1.95, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &721705875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721705873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R28
+  roomName: "\u56DE\u97F3\u5323\u6697\u5BA4"
+  regionId: A2
+  regionName: "\u5171\u9E23\u4E2D\u5EAD"
+  function: "\u9690\u85CF\u623F\uFF1A\u663E\u73B0\u9759\u6001\u5899\u7EB9\u540E\u8046\u542C\u73AF\u5883\u56DE\u58F0\u5E76\u8BB0\u5165\u8BB0\u5F55\u3002"
+  pacingBeat: secret
+  grantsKnowledge: []
+  optional: 1
+  hidden: 1
+  knowledgeVisibleBeforeMastery:
+  - R05
+  recoveryAndReturn: "\u4ECE\u663E\u73B0\u5165\u53E3\u53CC\u5411\u51FA\u5165\uFF1B\u4E0D\u653E\u5173\u952E\u80FD\u529B\u3002"
+  connections:
+  - id: E28
+    targetRoom: {fileID: 504138963}
+    label: "\u6697\u5BA4\u5185\u4FA7\u56DE\u95E8"
+    kind: 2
+    sourceType: hidden_passage
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - switch
+    shortcut: 0
+    hidden: 1
+    optional: 1
+    openedFrom: R28
+    previewedFrom: []
+    notes: "\u672A\u53D6\u5F97\u8F6C\u65F6\u53EF\u6CBF\u663E\u73B0\u5165\u53E3\u9000\u56DER05\uFF1B\u53D6\u5F97\u540E\u5F62\u6210\u5C0F\u73AF\u3002"
+--- !u!1 &748709719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 748709720}
+  - component: {fileID: 748709721}
+  m_Layer: 0
+  m_Name: "R37 - \u6CE2\u7EB9\u5206\u5C94\u5385"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &748709720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748709719}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15, y: -0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &748709721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748709719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R37
+  roomName: "\u6CE2\u7EB9\u5206\u5C94\u5385"
+  regionId: A5
+  regionName: "\u70B9\u9635\u4F20\u64AD\u7F51"
+  function: "\u4F20\u64AD\u7F51\u5916\u73AF\u5206\u5C94\uFF1B\u5206\u522B\u901A\u5F80\u4E3B\u63A2\u7D22\u8DEF\u5F84\u548C\u7EC8\u7AE0\u5916\u4FA7\u56DE\u8DEF\u3002"
+  pacingBeat: connect
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery: []
+  recoveryAndReturn: "\u53CC\u5411\u901A\u9053\uFF1B\u4ECE\u5165\u53E3\u53EF\u539F\u8DEF\u8FD4\u56DE\uFF0C\u4E0D\u8BBE\u7F6E\u4E0D\u53EF\u9006\u5760\u843D\u3002"
+  connections:
+  - id: E43
+    targetRoom: {fileID: 525927413}
+    label: "\u4F20\u64AD\u7F51\u4E3B\u8DEF\u7EBF"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+  - id: E48
+    targetRoom: {fileID: 504945956}
+    label: "\u5916\u73AF\u901A\u5411\u7EC8\u7AE0\u4FA7\u95E8"
+    kind: 3
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - reveal
+    - switch
+    - gather
+    - scatter
+    - connect
+    shortcut: 1
+    hidden: 0
+    optional: 1
+    openedFrom: 
+    previewedFrom:
+    - R37
+    notes: "\u7EC8\u7AE0\u4FA7\u95E8\uFF1B\u4E3B\u8DEF\u7EBF\u4ECD\u53EF\u7531R21\u8FDB\u5165\u3002"
+--- !u!1 &749447536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 749447537}
+  - component: {fileID: 749447538}
+  m_Layer: 0
+  m_Name: "R33 - \u76C6\u5730\u5916\u6CBF\u5F27\u5ECA"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &749447537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749447536}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5, y: 3.25, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &749447538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749447536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R33
+  roomName: "\u76C6\u5730\u5916\u6CBF\u5F27\u5ECA"
+  regionId: A3
+  regionName: "\u7A7A\u9E23\u76C6\u5730"
+  function: "\u7ED5\u884C\u76C6\u5730\u4E0A\u6CBF\uFF0C\u8FDE\u63A5\u6536\u70B9\u9057\u8FF9\u4E0E\u987A\u5E8F\u7EC3\u4E60\u95F4\uFF0C\u5F62\u6210\u9AD8\u4F4E\u4E24\u8DEF\u3002"
+  pacingBeat: connect
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery: []
+  recoveryAndReturn: "\u53CC\u5411\u901A\u9053\uFF1B\u4ECE\u5165\u53E3\u53EF\u539F\u8DEF\u8FD4\u56DE\uFF0C\u4E0D\u8BBE\u7F6E\u4E0D\u53EF\u9006\u5760\u843D\u3002"
+  connections:
+  - id: E37
+    targetRoom: {fileID: 1119059424}
+    label: "\u987A\u5E8F\u7EC3\u4E60\u95F4\u4E0A\u5C42\u95E8"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - gather
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R09
+    notes: 
+--- !u!1 &767293197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 767293198}
+  - component: {fileID: 767293199}
+  m_Layer: 0
+  m_Name: "R26 - \u7EC8\u7AE0\uFF1A\u5B8C\u6210\u4E00\u6B21\u53EF\u8BFB\u6F14\u594F"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &767293198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767293197}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.5, y: -3.25, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &767293199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767293197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R26
+  roomName: "\u7EC8\u7AE0\uFF1A\u5B8C\u6210\u4E00\u6B21\u53EF\u8BFB\u6F14\u594F"
+  regionId: A5
+  regionName: "\u70B9\u9635\u4F20\u64AD\u7F51"
+  function: "\u77ED\u53E5\u663E\u2192\u8F6C\u2192\u6536\u2192\u8FDE\uFF1B\u4FA7\u8FB9\u72EC\u7ACB\u76EE\u6807\u53E6\u7528\u653E\u3002"
+  pacingBeat: finale
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R25
+  recoveryAndReturn: "\u5206\u6BB5\u53CD\u9988\uFF0C\u4E0D\u91CD\u7F6E\u5DF2\u5B8C\u6210\u673A\u5173\u3002"
+  connections:
+  - id: E26
+    targetRoom: {fileID: 881016835}
+    label: "\u7EE7\u7EED\u63A2\u7D22\u51FA\u53E3"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+--- !u!1 &841314444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 841314445}
+  - component: {fileID: 841314446}
+  m_Layer: 0
+  m_Name: "R30 - \u6F6E\u75D5\u56DE\u58F0\u9F9B"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &841314445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841314444}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.5, y: 0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &841314446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841314444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R30
+  roomName: "\u6F6E\u75D5\u56DE\u58F0\u9F9B"
+  regionId: A1
+  regionName: "\u5931\u8C10\u5CB8\u7EBF"
+  function: "\u9690\u85CF\u56DE\u58F0\u652F\u95F4\uFF1B\u53D1\u73B0\u65E7\u58C1\u7EB9\u5E76\u8BB0\u5F55\u989D\u5916\u73AF\u5883\u97F3\uFF0C\u4E0D\u63D0\u4F9B\u4E3B\u7EBF\u80FD\u529B\u3002"
+  pacingBeat: explore
+  grantsKnowledge: []
+  optional: 1
+  hidden: 1
+  knowledgeVisibleBeforeMastery: []
+  recoveryAndReturn: "\u53CC\u5411\u901A\u9053\uFF1B\u4ECE\u5165\u53E3\u53EF\u539F\u8DEF\u8FD4\u56DE\uFF0C\u4E0D\u8BBE\u7F6E\u4E0D\u53EF\u9006\u5760\u843D\u3002"
+  connections:
+  - id: E31
+    targetRoom: {fileID: 471764716}
+    label: "\u56DE\u5230\u5165\u53E3\u5916\u6CBF"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 0
+    hidden: 0
+    optional: 1
+    openedFrom: R30
+    previewedFrom: []
+    notes: 
+--- !u!1 &881016833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 881016834}
+  - component: {fileID: 881016835}
+  m_Layer: 0
+  m_Name: "R27 - \u7ED3\u675F\u4E0E\u7EE7\u7EED\u63A2\u7D22"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &881016834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881016833}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15, y: -3.25, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &881016835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881016833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R27
+  roomName: "\u7ED3\u675F\u4E0E\u7EE7\u7EED\u63A2\u7D22"
+  regionId: A5
+  regionName: "\u70B9\u9635\u4F20\u64AD\u7F51"
+  function: "\u7ED3\u5C3E\u4E0E\u81EA\u7531\u56DE\u8BBF\uFF1B\u91CA\u4E49\u5047\u8BF4\u53EF\u9009\u3002"
+  pacingBeat: postgame
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R26
+  recoveryAndReturn: "\u673A\u5173\u72B6\u6001\u4FDD\u7559\uFF0C\u53EF\u8FD4\u56DE\u4E16\u754C\u3002"
+  connections: []
+--- !u!1 &964148353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 964148354}
+  - component: {fileID: 964148355}
+  m_Layer: 0
+  m_Name: "R19 - \u89C6\u89D2\u8F6C\u6362\uFF1A\u70B9\u9635\u7F51\u5165\u53E3"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &964148354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964148353}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15, y: 0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &964148355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964148353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R19
+  roomName: "\u89C6\u89D2\u8F6C\u6362\uFF1A\u70B9\u9635\u7F51\u5165\u53E3"
+  regionId: A5
+  regionName: "\u70B9\u9635\u4F20\u64AD\u7F51"
+  function: "\u81EA\u52A8\u89C6\u89D2\u8F6C\u6362\u5B89\u5168\u7F13\u51B2\uFF0C\u4E0D\u63D0\u4F9B\u624B\u52A8\u5207\u6362\u3002"
+  pacingBeat: transition
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R18
+  recoveryAndReturn: "\u8FC7\u6E21\u7ED3\u675F\u540E\u6062\u590D\u8F93\u5165\uFF0C\u8FD4\u7A0B\u95E8\u4FDD\u6301\u5F00\u653E\u3002"
+  connections:
+  - id: E19
+    targetRoom: {fileID: 748709721}
+    label: "\u4F20\u64AD\u7F51\u5916\u73AF\u5165\u53E3"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+--- !u!1 &1119059422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1119059423}
+  - component: {fileID: 1119059424}
+  m_Layer: 0
+  m_Name: "R11 - \u8F6C\u4E0E\u6536\u7684\u987A\u5E8F"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1119059423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119059422}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1119059424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119059422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R11
+  roomName: "\u8F6C\u4E0E\u6536\u7684\u987A\u5E8F"
+  regionId: A3
+  regionName: "\u7A7A\u9E23\u76C6\u5730"
+  function: "\u5148\u5207\u6362\u9884\u8BBE\u5F62\u6001\u518D\u805A\u5408\uFF1B\u68C0\u9A8C\u4E24\u80FD\u529B\u987A\u5E8F\u3002"
+  pacingBeat: test
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R10
+  recoveryAndReturn: "\u72B6\u6001\u53EF\u9006\uFF1B\u5B8C\u6210\u540E\u53EF\u5F00\u56DE\u4E2D\u5EAD\u6377\u5F84\u3002"
+  connections:
+  - id: E11
+    targetRoom: {fileID: 353965538}
+    label: "\u5BC6\u96C6\u533A\u5165\u53E3"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - gather
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R05
+    - R10
+    notes: 
+  - id: S01
+    targetRoom: {fileID: 422636133}
+    label: "\u76C6\u5730\u56DE\u4E2D\u5EAD\u6377\u5F84"
+    kind: 3
+    sourceType: shortcut
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - switch
+    - gather
+    shortcut: 1
+    hidden: 0
+    optional: 0
+    openedFrom: R11
+    previewedFrom: []
+    notes: "\u5B8C\u6210\u987A\u5E8F\u6D4B\u8BD5\u540E\u5F00\u542F\uFF0C\u53CC\u5411\u901A\u884C\u3002"
+--- !u!1 &1120177964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120177965}
+  - component: {fileID: 1120177966}
+  m_Layer: 0
+  m_Name: "R24 - \u7EFC\u5408\u673A\u5173\u7B2C\u4E09\u9636\u6BB5\uFF1A\u5851\u5F62\u5E76\u8FDE\u63A5"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1120177965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120177964}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.5, y: -3.25, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1120177966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120177964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R24
+  roomName: "\u7EFC\u5408\u673A\u5173\u7B2C\u4E09\u9636\u6BB5\uFF1A\u5851\u5F62\u5E76\u8FDE\u63A5"
+  regionId: A5
+  regionName: "\u70B9\u9635\u4F20\u64AD\u7F51"
+  function: "\u7528\u8F6C\u4E0E\u6536\u5851\u51FA\u951A\u70B9\u5F62\u6001\uFF0C\u518D\u7528\u8FDE\u63A5\u6865\u3002"
+  pacingBeat: combine
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R23
+  recoveryAndReturn: "\u7A33\u5B9A\u524D\u4E0D\u542F\u7528\u78B0\u649E\uFF1B\u53EF\u5207\u6362\u91CD\u8BD5\u3002"
+  connections:
+  - id: E24
+    targetRoom: {fileID: 1259703566}
+    label: "\u5851\u5F62\u5E76\u8FDE\u63A5"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - switch
+    - gather
+    - connect
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+--- !u!1 &1127526289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1127526290}
+  - component: {fileID: 1127526291}
+  m_Layer: 0
+  m_Name: "R29 - \u4FA7\u58F0\u6536\u85CF\u5BA4"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1127526290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127526289}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 1.95, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1127526291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127526289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R29
+  roomName: "\u4FA7\u58F0\u6536\u85CF\u5BA4"
+  regionId: A4
+  regionName: "\u6563\u70B9\u6863\u6848\u5C42"
+  function: "\u53EF\u9009\u4FA7\u652F\uFF1A\u653E\u5F00\u4FA7\u8FB9\u5BC6\u7ED3\u5E76\u8BB0\u5F55\u989D\u5916\u73AF\u5883\u97F3\u578B\u3002"
+  pacingBeat: optional
+  grantsKnowledge: []
+  optional: 1
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R13
+  recoveryAndReturn: "\u539F\u8DEF\u53CC\u5411\u8FD4\u56DE\uFF1B\u5956\u52B1\u4E0D\u542B\u4E3B\u7EBF\u80FD\u529B\u3002"
+  connections: []
+--- !u!1 &1177237110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1177237111}
+  - component: {fileID: 1177237112}
+  m_Layer: 0
+  m_Name: "R31 - \u4E2D\u5EAD\u4E0B\u5C42\u62F1\u5ECA"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1177237111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177237110}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: 0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1177237112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177237110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R31
+  roomName: "\u4E2D\u5EAD\u4E0B\u5C42\u62F1\u5ECA"
+  regionId: A2
+  regionName: "\u5171\u9E23\u4E2D\u5EAD"
+  function: "\u8FDE\u63A5\u4E2D\u5EAD\u4E0E\u53CC\u6001\u56DE\u5ECA\u7684\u4E0B\u5C42\u901A\u8DEF\uFF1B\u8F6C\u76F8\u95E8\u5F00\u542F\u540E\u5F62\u6210\u7B2C\u4E8C\u6761\u73AF\u7EBF\u3002"
+  pacingBeat: connect
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery: []
+  recoveryAndReturn: "\u53CC\u5411\u901A\u9053\uFF1B\u4ECE\u5165\u53E3\u53EF\u539F\u8DEF\u8FD4\u56DE\uFF0C\u4E0D\u8BBE\u7F6E\u4E0D\u53EF\u9006\u5760\u843D\u3002"
+  connections:
+  - id: E33
+    targetRoom: {fileID: 1200112757}
+    label: "\u53CC\u6001\u95E8\u4E0B\u5C42\u56DE\u5ECA"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - switch
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R05
+    notes: "\u53EF\u4ECE\u4E2D\u5EAD\u4E00\u4FA7\u63D0\u524D\u770B\u89C1\u5173\u95ED\u7684\u8F6C\u76F8\u95E8\u3002"
+--- !u!1 &1200112755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1200112756}
+  - component: {fileID: 1200112757}
+  m_Layer: 0
+  m_Name: "R08 - \u53CC\u6001\u56DE\u5ECA\u5BF9\u7167\u5BA4"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1200112756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200112755}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5, y: -0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1200112757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200112755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R08
+  roomName: "\u53CC\u6001\u56DE\u5ECA\u5BF9\u7167\u5BA4"
+  regionId: A2
+  regionName: "\u5171\u9E23\u4E2D\u5EAD"
+  function: "\u6BD4\u8F83\u4E24\u95F4\u77ED\u623F\u7684\u72B6\u6001\u5DEE\u5F02\uFF1B\u89C2\u5BDF\u76C6\u5730\u8DEF\u7EBF\u3002"
+  pacingBeat: develop
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R07
+  recoveryAndReturn: "\u70B9\u7C07\u4E0D\u4F1A\u6D88\u5931\u6216\u5C01\u6B7B\u51FA\u53E3\u3002"
+  connections:
+  - id: E08
+    targetRoom: {fileID: 442758348}
+    label: "\u76C6\u5730\u5317\u4FA7\u53F0\u9636"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - switch
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R05
+    notes: 
+--- !u!1 &1257389972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1257389973}
+  - component: {fileID: 1257389974}
+  m_Layer: 0
+  m_Name: "R35 - \u6298\u5C04\u4E66\u67B6\u6697\u7EBF"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1257389973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257389972}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: -0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1257389974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257389972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R35
+  roomName: "\u6298\u5C04\u4E66\u67B6\u6697\u7EBF"
+  regionId: A4
+  regionName: "\u6563\u70B9\u6863\u6848\u5C42"
+  function: "\u8FDE\u63A5\u6863\u6848\u5C42\u4E24\u7AEF\uFF1B\u53D6\u5F97\u8FDE\u540E\u5F00\u542F\uFF0C\u4F5C\u4E3A\u56DE\u8BBF\u6377\u5F84\u3002"
+  pacingBeat: master
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery: []
+  recoveryAndReturn: "\u53CC\u5411\u901A\u9053\uFF1B\u4ECE\u5165\u53E3\u53EF\u539F\u8DEF\u8FD4\u56DE\uFF0C\u4E0D\u8BBE\u7F6E\u4E0D\u53EF\u9006\u5760\u843D\u3002"
+  connections:
+  - id: E41
+    targetRoom: {fileID: 1633589058}
+    label: "\u4E66\u67B6\u6697\u7EBF\u51FA\u53E3"
+    kind: 3
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 1
+    hidden: 0
+    optional: 0
+    openedFrom: R35
+    previewedFrom: []
+    notes: 
+--- !u!1 &1259703564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1259703565}
+  - component: {fileID: 1259703566}
+  m_Layer: 0
+  m_Name: "R25 - \u7EFC\u5408\u673A\u5173\u7B2C\u56DB\u9636\u6BB5\uFF1A\u9009\u62E9\u7A33\u5B9A\u72B6\u6001"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1259703565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259703564}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: -3.25, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1259703566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259703564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R25
+  roomName: "\u7EFC\u5408\u673A\u5173\u7B2C\u56DB\u9636\u6BB5\uFF1A\u9009\u62E9\u7A33\u5B9A\u72B6\u6001"
+  regionId: A5
+  regionName: "\u70B9\u9635\u4F20\u64AD\u7F51"
+  function: "\u5148\u8F6C\u5230\u7A33\u5B9A\u7AEF\u70B9\uFF0C\u518D\u8FDE\u6838\u5FC3\u5E76\u5F00\u542F\u6377\u5F84\u3002"
+  pacingBeat: test
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R24
+  recoveryAndReturn: "\u72B6\u6001\u53EF\u9006\uFF0C\u53EF\u56DER24\u91CD\u770B\u3002"
+  connections:
+  - id: E25
+    targetRoom: {fileID: 767293199}
+    label: "\u7A33\u5B9A\u6838\u5FC3\u72B6\u6001"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - reveal
+    - switch
+    - gather
+    - scatter
+    - connect
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+  - id: S03
+    targetRoom: {fileID: 2038582786}
+    label: "\u6838\u5FC3\u56DE\u4E2D\u5EAD\u6377\u5F84"
+    kind: 3
+    sourceType: shortcut
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - reveal
+    - switch
+    - gather
+    - scatter
+    - connect
+    shortcut: 1
+    hidden: 0
+    optional: 0
+    openedFrom: R25
+    previewedFrom: []
+    notes: "\u6838\u5FC3\u7A33\u5B9A\u540E\u5F00\u542F\uFF0C\u53CC\u5411\u901A\u884C\u3002"
+--- !u!1 &1286651765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1286651766}
+  - component: {fileID: 1286651767}
+  m_Layer: 0
+  m_Name: "R14 - \u653E\u5F00\u540E\u5EFA\u7ACB\u6B63\u786E\u8FDE\u63A5"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1286651766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286651765}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.5, y: 0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1286651767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286651765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R14
+  roomName: "\u653E\u5F00\u540E\u5EFA\u7ACB\u6B63\u786E\u8FDE\u63A5"
+  regionId: A4
+  regionName: "\u6563\u70B9\u6863\u6848\u5C42"
+  function: "\u6E05\u9664\u72EC\u7ACB\u5BC6\u7ED3\u5E76\u8FA8\u8BA4\u6B63\u786E\u53CC\u7AEF\uFF1B\u4E0D\u8981\u6C42\u8FDE\u3002"
+  pacingBeat: develop
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R13
+  recoveryAndReturn: "\u9519\u8BEF\u8DEF\u4ECD\u53EF\u56DE\u9000\uFF1B\u4E0D\u79FB\u9664\u4E3B\u6865\u3002"
+  connections:
+  - id: E14
+    targetRoom: {fileID: 1505875868}
+    label: "\u89C6\u89D2\u7F13\u51B2\u5ECA"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - scatter
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+  - id: E40
+    targetRoom: {fileID: 1257389974}
+    label: "\u6298\u5C04\u4E66\u67B6\u95E8"
+    kind: 3
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - connect
+    shortcut: 1
+    hidden: 0
+    optional: 0
+    openedFrom: R14
+    previewedFrom:
+    - R14
+    notes: "\u53D6\u5F97\u8FDE\u4E4B\u524D\u53EF\u4ECER14\u4E00\u4FA7\u89C2\u5BDF\u95E8\u540E\u7684\u8FDC\u7AEF\u8109\u52A8\u3002"
+--- !u!1 &1431561650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431561652}
+  - component: {fileID: 1431561651}
+  m_Layer: 0
+  m_Name: "R39 - \u73AF\u57CE\u56DE\u58F0\u4E95"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1431561651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431561650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R39
+  roomName: "\u73AF\u57CE\u56DE\u58F0\u4E95"
+  regionId: A2
+  regionName: "\u5171\u9E23\u4E2D\u5EAD"
+  function: "\u9690\u85CF\u7684\u665A\u671F\u5F00\u542F\u56DE\u63A5\u901A\u9053\uFF0C\u8FDE\u63A5\u4E2D\u5FC3\u67A2\u7EBD\u4E0E\u56DE\u5F52\u5385\uFF0C\u95ED\u5408\u8FDC\u7AEF\u8DEF\u7EBF\u3002"
+  pacingBeat: master
+  grantsKnowledge: []
+  optional: 1
+  hidden: 1
+  knowledgeVisibleBeforeMastery: []
+  recoveryAndReturn: "\u53CC\u5411\u901A\u9053\uFF1B\u4ECE\u5165\u53E3\u53EF\u539F\u8DEF\u8FD4\u56DE\uFF0C\u4E0D\u8BBE\u7F6E\u4E0D\u53EF\u9006\u5760\u843D\u3002"
+  connections:
+  - id: E47
+    targetRoom: {fileID: 2038582786}
+    label: "\u4E95\u5E95\u56DE\u63A5\u5385\u95E8"
+    kind: 2
+    sourceType: hidden_passage
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - reveal
+    - switch
+    - gather
+    - scatter
+    - connect
+    shortcut: 1
+    hidden: 1
+    optional: 1
+    openedFrom: R39
+    previewedFrom: []
+    notes: 
+--- !u!4 &1431561652
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431561650}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5, y: -3.25, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1505875866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1505875867}
+  - component: {fileID: 1505875868}
+  m_Layer: 0
+  m_Name: "R15 - \u8FD4\u56DE\u4FA7\u89C6\u5BC6\u96C6\u7ED3\u533A\u51FA\u53E3"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1505875867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505875866}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.5, y: 1.95, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1505875868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505875866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R15
+  roomName: "\u8FD4\u56DE\u4FA7\u89C6\u5BC6\u96C6\u7ED3\u533A\u51FA\u53E3"
+  regionId: A4
+  regionName: "\u6563\u70B9\u6863\u6848\u5C42"
+  function: "\u89C6\u89D2\u8FC7\u6E21\u7F13\u51B2\uFF0C\u89C6\u7EBF\u6307\u5411\u53EF\u8FBE\u7684\u65AD\u7AEF\u9057\u8FF9\u3002"
+  pacingBeat: transition
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R14
+  recoveryAndReturn: "\u8FC7\u6E21\u9501\u8F93\u5165\uFF1B\u5B8C\u6210\u540E\u53EF\u539F\u8DEF\u8FD4\u56DE\u3002"
+  connections:
+  - id: E15
+    targetRoom: {fileID: 1565977351}
+    label: "\u65AD\u7AEF\u89C2\u5BDF\u8DEF"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R13
+    - R15
+    notes: 
+--- !u!1 &1565977349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565977350}
+  - component: {fileID: 1565977351}
+  m_Layer: 0
+  m_Name: "R16 - \u65AD\u88C2\u53CC\u7AEF"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1565977350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565977349}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: 1.95, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1565977351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565977349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R16
+  roomName: "\u65AD\u88C2\u53CC\u7AEF"
+  regionId: A4
+  regionName: "\u6563\u70B9\u6863\u6848\u5C42"
+  function: "\u89C2\u5BDF\u540C\u6B65\u951A\u70B9\u5E76\u83B7\u5F97\u8FDE\uFF1B\u83B7\u53D6\u4E0D\u9700\u8FDE\u3002"
+  pacingBeat: acquire
+  grantsKnowledge:
+  - connect
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R15
+  recoveryAndReturn: "\u5B89\u5168\u5730\u9762\uFF0C\u65E0\u5355\u5411\u5760\u843D\u3002"
+  connections:
+  - id: E16
+    targetRoom: {fileID: 172435239}
+    label: "\u77ED\u8DDD\u951A\u70B9\u5ECA"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - connect
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R13
+    - R15
+    notes: 
+--- !u!1 &1625277739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1625277740}
+  - component: {fileID: 1625277741}
+  m_Layer: 0
+  m_Name: "R01 - \u5165\u53E3\u5E73\u53F0"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1625277740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625277739}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.5, y: -0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1625277741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625277739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R01
+  roomName: "\u5165\u53E3\u5E73\u53F0"
+  regionId: A1
+  regionName: "\u5931\u8C10\u5CB8\u7EBF"
+  function: "\u5B89\u5168\u8D77\u70B9\uFF1B\u5F00\u573A\u8BB0\u5F55\u663E\u3002"
+  pacingBeat: teach
+  grantsKnowledge:
+  - reveal
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery: []
+  recoveryAndReturn: "\u77ED\u8DF3\u5931\u8BEF\u56DE\u5230\u540C\u623F\u5B89\u5168\u5C0F\u53F0\u3002"
+  connections:
+  - id: E01
+    targetRoom: {fileID: 2124565360}
+    label: "\u77ED\u8DF3\u843D\u70B9"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+--- !u!1 &1633589056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633589057}
+  - component: {fileID: 1633589058}
+  m_Layer: 0
+  m_Name: "R18 - \u79FB\u52A8\u540E\u8FDE\u63A5"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1633589057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633589056}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.5, y: 0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1633589058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633589056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R18
+  roomName: "\u79FB\u52A8\u540E\u8FDE\u63A5"
+  regionId: A4
+  regionName: "\u6563\u70B9\u6863\u6848\u5C42"
+  function: "\u5148\u8F6C\u9009\u7AEF\u70B9\u9884\u8BBE\uFF0C\u518D\u7528\u8FDE\uFF1B\u5F00\u542F\u4E24\u6761\u6377\u5F84\u3002"
+  pacingBeat: test
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R17
+  recoveryAndReturn: "\u9519\u8BEF\u7AEF\u70B9\u53EF\u9006\u5207\u6362\uFF0C\u7A33\u5B9A\u8F6E\u5ED3\u53EF\u89C1\u3002"
+  connections:
+  - id: E18
+    targetRoom: {fileID: 964148355}
+    label: "\u81EA\u52A8\u89C6\u89D2\u8F6C\u6362"
+    kind: 5
+    sourceType: automatic_transition
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - connect
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+  - id: S02
+    targetRoom: {fileID: 1286651767}
+    label: "\u6863\u6848\u5C42\u6298\u8FD4\u6377\u5F84"
+    kind: 3
+    sourceType: shortcut
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - connect
+    shortcut: 1
+    hidden: 0
+    optional: 0
+    openedFrom: R18
+    previewedFrom: []
+    notes: "\u79FB\u52A8\u951A\u70B9\u7A33\u5B9A\u540E\u5F00\u542F\uFF0C\u53CC\u5411\u901A\u884C\u3002"
+  - id: S04
+    targetRoom: {fileID: 1200112757}
+    label: "\u6DF1\u5C42\u4E2D\u5EAD\u6377\u5F84"
+    kind: 3
+    sourceType: shortcut
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - scatter
+    - connect
+    shortcut: 1
+    hidden: 0
+    optional: 0
+    openedFrom: R18
+    previewedFrom: []
+    notes: "\u5B8C\u6210\u79FB\u52A8\u8FDE\u63A5\u540E\u5F00\u542F\uFF0C\u53CC\u5411\u901A\u884C\u3002"
+--- !u!1 &1712251836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1712251837}
+  - component: {fileID: 1712251838}
+  m_Layer: 0
+  m_Name: "R03 - \u7B2C\u4E00\u6B21\u663E\u73B0"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1712251837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712251836}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.5, y: -0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1712251838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712251836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R03
+  roomName: "\u7B2C\u4E00\u6B21\u663E\u73B0"
+  regionId: A1
+  regionName: "\u5931\u8C10\u5CB8\u7EBF"
+  function: "\u5B89\u5168\u5E73\u53F0\u4E0A\u4F7F\u7528\u663E\uFF0C\u9A8C\u8BC1\u53EA\u63ED\u793A\u56FA\u5B9A\u8F6E\u5ED3\u3002"
+  pacingBeat: teach
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R02
+  recoveryAndReturn: "\u56DE\u5B89\u5168\u5E73\u53F0\u5373\u53EF\u91CD\u8BD5\u3002"
+  connections:
+  - id: E03
+    targetRoom: {fileID: 471764716}
+    label: "\u663E\u73B0\u8F6E\u5ED3\u540E\u7684\u77ED\u8DF3"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - reveal
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R03
+    notes: 
+  - id: E30
+    targetRoom: {fileID: 841314446}
+    label: "\u663E\u73B0\u6F6E\u75D5\u540E\u7684\u6697\u7F1D"
+    kind: 2
+    sourceType: hidden_passage
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - reveal
+    shortcut: 0
+    hidden: 1
+    optional: 1
+    openedFrom: R03
+    previewedFrom:
+    - R03
+    notes: 
+--- !u!1 &1818840125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1818840126}
+  - component: {fileID: 1818840127}
+  m_Layer: 0
+  m_Name: "R23 - \u7EFC\u5408\u673A\u5173\u7B2C\u4E8C\u9636\u6BB5\uFF1A\u6E05\u51FA\u4F20\u64AD\u8DEF"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1818840126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818840125}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: -3.25, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1818840127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818840125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R23
+  roomName: "\u7EFC\u5408\u673A\u5173\u7B2C\u4E8C\u9636\u6BB5\uFF1A\u6E05\u51FA\u4F20\u64AD\u8DEF"
+  regionId: A5
+  regionName: "\u70B9\u9635\u4F20\u64AD\u7F51"
+  function: "\u7528\u653E\u6253\u5F00\u72EC\u7ACB\u4FA7\u8FB9\u5BC6\u7ED3\uFF0C\u4FDD\u7559\u4E3B\u6865\u3002"
+  pacingBeat: combine
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R22
+  recoveryAndReturn: "\u9519\u8BEF\u76EE\u6807\u53EF\u91CD\u65B0\u6F14\u594F\u3002"
+  connections:
+  - id: E23
+    targetRoom: {fileID: 1120177966}
+    label: "\u6E05\u9664\u4FA7\u8FB9\u5BC6\u7ED3"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - scatter
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+  - id: E44
+    targetRoom: {fileID: 156766144}
+    label: "\u5171\u9E23\u6C60\u4E0B\u884C\u9636"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - scatter
+    shortcut: 0
+    hidden: 0
+    optional: 1
+    openedFrom: R23
+    previewedFrom: []
+    notes: 
+--- !u!1 &2038582784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2038582785}
+  - component: {fileID: 2038582786}
+  m_Layer: 0
+  m_Name: "R21 - \u56DE\u5230\u4E2D\u5FC3"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2038582785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038582784}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.95, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2038582786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038582784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R21
+  roomName: "\u56DE\u5230\u4E2D\u5FC3"
+  regionId: A2
+  regionName: "\u5171\u9E23\u4E2D\u5EAD"
+  function: "\u70B9\u9635\u7F51\u56DE\u63A5\u5385\uFF0C\u6C47\u5408\u5DF2\u5F00\u8DEF\u7EBF\u5E76\u8FDB\u5165\u7EC8\u7AE0\u3002"
+  pacingBeat: hub_return
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R20
+  recoveryAndReturn: "\u56DE\u63A5\u5ECA\u53CC\u5411\uFF0C\u4E0D\u6D88\u8017\u6216\u6E05\u9664\u80FD\u529B\u3002"
+  connections:
+  - id: E21
+    targetRoom: {fileID: 504945956}
+    label: "\u7EC8\u7AE0\u5165\u53E3\u5C01\u9501"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - reveal
+    - switch
+    - gather
+    - scatter
+    - connect
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R05
+    notes: 
+--- !u!1 &2041228292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2041228294}
+  - component: {fileID: 2041228293}
+  m_Layer: 0
+  m_Name: World Map - Moremap 39 Rooms
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2041228293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041228292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c440ef4a5a479f0488b58e56b26f5ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapDraftGraph
+  meta:
+    title: "\u94F6\u6CB3\u6076\u9B54\u57CE\u5F0F\u4E16\u754C\u603B\u5730\u56FE\uFF08\u7B2C\u4E00\u7248\u62D3\u6251\u8349\u6848\uFF09"
+    status: EXPANDED_PROPOSED_TOPOLOGY_AND_ABSTRACT_LAYOUT
+    basis:
+    - "\u4F17\u58F0\u6210\u8C61_\u5168\u6D41\u7A0B\u73A9\u6CD5\u8BBE\u8BA1_v0.4.docx"
+    - "\u5173\u5361\u6D41\u7A0B.docx"
+    - "\u672C\u8F6E\u7528\u6237\u8981\u6C42"
+    language: zh-CN
+    room_count: 39
+    region_count: 5
+    connection_count: 53
+    exploration_loop_count: 13
+    layout_note: "\u5E03\u5C40\u589E\u52A0\u8DE8\u533A\u56DE\u63A5\u3001\u4E0B\u5C42\u62F1\u5ECA\u3001\u5916\u73AF\u4E0E\u9690\u85CF\u4E95\u9053\uFF1B\u623F\u95F4\u91CD\u53E0\u68C0\u67E5\u9488\u5BF9\u623F\u95F4\u77E9\u5F62\uFF0C\u4E0D\u4EE3\u8868\u5B9E\u9645\u5E73\u53F0\u51E0\u4F55\u3002"
+    canon_boundary: "\u6CBF\u7528\u539F27\u6D41\u7A0B\u573A\u666F\u548C\u4E94\u79CD\u80FD\u529B\uFF1B\u533A\u57DF\u547D\u540D\u3001\u652F\u7EBF\u3001\u9690\u85CF\u623F\u3001\u6377\u5F84\u53CA\u8FDE\u63A5\u65B9\u5F0F\u4E3A\u672C\u8F6E\u63D0\u6848\u3002\u672A\u77E5\u7B26\u53F76\u4E0D\u52A0\u5165\u3002"
+    output_folder: Assets/WorldMapDraft
+    schema_note: Room positions include an abstract grid position and matching draw.io
+      pixel bounds; neither represents Unity world units.
+    change_summary: "\u753129\u95F4\u6269\u4E3A39\u95F4\uFF1B\u4FDD\u7559\u539F\u6709\u4E94\u533A\u4E0E\u4E94\u79CD\u77E5\u8BC6\u987A\u5E8F\uFF1B\u52A0\u516510\u95F4\u63A2\u7D22/\u56DE\u63A5\u7A7A\u95F4\u548C9\u6761\u65B0\u589E\u95ED\u73AF\u5173\u7CFB\u3002"
+  regions:
+  - id: A1
+    name: "\u5931\u8C10\u5CB8\u7EBF"
+    relative_position: "\u4E16\u754C\u897F\u4FA7"
+    purpose: "\u5F00\u573A\u4E0E\u663E\u73B0\u6559\u5B66"
+    status: proposed
+    color_hex: '#4F91C7'
+  - id: A2
+    name: "\u5171\u9E23\u4E2D\u5EAD"
+    relative_position: "\u4E2D\u897F\u90E8\u67A2\u7EBD"
+    purpose: "\u5B89\u5168\u6C47\u5408\u3001\u5206\u6D41\u4E0E\u56DE\u8BBF"
+    status: proposed
+    color_hex: '#48A887'
+  - id: A3
+    name: "\u7A7A\u9E23\u76C6\u5730"
+    relative_position: "\u4E2D\u5EAD\u5317\u4FA7"
+    purpose: "\u6559\u6388\u6536\u4E0E\u72B6\u6001\u7EC4\u5408"
+    status: proposed
+    color_hex: '#92B44F'
+  - id: A4
+    name: "\u6563\u70B9\u6863\u6848\u5C42"
+    relative_position: "\u4E2D\u5EAD\u4E1C\u4FA7"
+    purpose: "\u6559\u6388\u653E\u4E0E\u8FDE\u7684\u524D\u7F6E\u89C2\u5BDF"
+    status: proposed
+    color_hex: '#B36BC2'
+  - id: A5
+    name: "\u70B9\u9635\u4F20\u64AD\u7F51"
+    relative_position: "\u4E16\u754C\u4E1C\u5357\u4FA7"
+    purpose: "\u4F20\u64AD\u63A2\u7D22\u4E0E\u7EC8\u7AE0\u7EFC\u5408\u6D4B\u8BD5"
+    status: proposed
+    color_hex: '#D99843'
+  knowledge:
+  - id: reveal
+    symbol: "\u663E\uFF081\uFF09"
+    name: "\u663E"
+    room: R01
+    order: 1
+    critical: 1
+    requires_before: []
+    acquisition: "\u5F00\u573A\u81EA\u52A8\u91CA\u653E\u5E76\u8BB0\u5F55\uFF1B\u53EA\u663E\u793A\u56FA\u5B9A\u8F6E\u5ED3\uFF0C\u4E0D\u751F\u6210\u5730\u5F62\u3002"
+  - id: switch
+    symbol: "\u8F6C\uFF082\uFF09"
+    name: "\u8F6C"
+    room: R06
+    order: 2
+    critical: 1
+    requires_before:
+    - reveal
+    acquisition: "\u5728\u4E2D\u7A7A\u690D\u7269\u8046\u542C\u5E76\u62FE\u53D6\u3002"
+  - id: gather
+    symbol: "\u6536\uFF083\uFF09"
+    name: "\u6536"
+    room: R09
+    order: 3
+    critical: 1
+    requires_before:
+    - reveal
+    - switch
+    acquisition: "\u7528\u8F6C\u5C06\u4E24\u5904\u673A\u5173\u5207\u5230\u4E0E\u6D45\u51F9\u69FD\u5339\u914D\u7684\u9884\u8BBE\u72B6\u6001\u3002"
+  - id: scatter
+    symbol: "\u653E\uFF084\uFF09"
+    name: "\u653E"
+    room: R12
+    order: 4
+    critical: 1
+    requires_before:
+    - reveal
+    - switch
+    - gather
+    acquisition: "\u5148\u7528\u663E\u8BC6\u522B\u5B89\u5168\u4FA7\u8DEF\u540E\u62FE\u53D6\uFF0C\u4E0D\u8981\u6C42\u5148\u4F1A\u653E\u3002"
+  - id: connect
+    symbol: "\u8FDE\uFF085\uFF09"
+    name: "\u8FDE"
+    room: R16
+    order: 5
+    critical: 1
+    requires_before:
+    - reveal
+    - switch
+    - gather
+    - scatter
+    acquisition: "\u4ECE\u653E\u6559\u5B66\u533A\u8D70\u53EF\u5F80\u8FD4\u8DEF\u7EBF\u5230\u65AD\u88C2\u53CC\u7AEF\uFF1B\u8FDB\u5165\u83B7\u53D6\u623F\u4E0D\u8981\u6C42\u8FDE\u3002"
+  gates:
+  - id: K_SWITCH
+    requires:
+    - switch
+    first_critical_use: E06
+    previews:
+    - room: R03
+      known:
+      - reveal
+    - room: R05
+      known:
+      - reveal
+    signposting: "\u53EF\u63D0\u524D\u770B\u89C1\u95ED\u5408/\u5F00\u542F\u4E24\u5957\u8F6E\u5ED3\uFF1B\u4E0D\u5C01\u6B7B\u5165\u53E3\u4E3B\u7EBF\u3002"
+  - id: K_GATHER
+    requires:
+    - gather
+    first_critical_use: E10
+    previews:
+    - room: R08
+      known:
+      - reveal
+      - switch
+    signposting: "\u53EF\u5148\u770B\u5230\u6D45\u51F9\u69FD\u4E0E\u70B9\u7C07\uFF0C\u518D\u56DE\u4E2D\u5EAD\u3002"
+  - id: K_SCATTER
+    requires:
+    - scatter
+    first_critical_use: E12
+    previews:
+    - room: R10
+      known:
+      - reveal
+      - switch
+      - gather
+    signposting: "\u5BC6\u96C6\u70B9\u5835\u4F4F\u4F20\u64AD\u7EBF\uFF0C\u5B89\u5168\u4FA7\u843D\u811A\u4E0E\u7ED5\u884C\u7EBF\u540C\u5C4F\u53EF\u89C1\u3002"
+  - id: K_CONNECT
+    requires:
+    - connect
+    first_critical_use: E16
+    previews:
+    - room: R13
+      known:
+      - reveal
+      - switch
+      - gather
+      - scatter
+    - room: R15
+      known:
+      - reveal
+      - switch
+      - gather
+      - scatter
+    signposting: "\u65AD\u88C2\u53CC\u7AEF\u63D0\u524D\u53EF\u89C1\uFF1BR16\u83B7\u53D6\u8FDE\u4E0D\u4F9D\u8D56\u8FDE\u3002"
+  - id: K_ALL
+    requires:
+    - reveal
+    - switch
+    - gather
+    - scatter
+    - connect
+    first_critical_use: E21
+    previews:
+    - room: R05
+      known:
+      - reveal
+    signposting: "\u4E2D\u5EAD\u8FDC\u773A\u7EC8\u7AE0\u591A\u5C42\u7ED3\u6784\uFF1B\u5148\u63D0\u793A\u540E\u5F00\u653E\u3002"
+  - id: K_ARCHIVE_LOOP
+    requires:
+    - connect
+    first_critical_use: 
+    previews:
+    - room: R14
+      known:
+      - reveal
+      - switch
+      - gather
+      - scatter
+    signposting: "R14\u53EF\u63D0\u524D\u770B\u5230\u6298\u5C04\u4E66\u67B6\u53E6\u4E00\u4FA7\u7684\u8109\u52A8\uFF1B\u53D6\u5F97\u8FDE\u540E\u5F00\u542F\u4E24\u7AEF\u56DE\u8BBF\u3002"
+  - id: K_DEEP_RETURN
+    requires:
+    - reveal
+    - switch
+    - gather
+    - scatter
+    - connect
+    first_critical_use: 
+    previews:
+    - room: R05
+      known:
+      - reveal
+    signposting: "\u4E2D\u5EAD\u4E95\u6CBF\u53EF\u663E\u73B0\u73AF\u5F62\u7EB9\u8DEF\uFF1B\u5168\u90E8\u6838\u5FC3\u77E5\u8BC6\u53D6\u5F97\u540E\uFF0C\u4E24\u4FA7\u56DE\u63A5\u95E8\u5747\u53EF\u8FD4\u56DE\u3002"
+  explorationLoops:
+  - id: L1
+    name: "\u4E2D\u5EAD\u2014\u76C6\u5730\u2014\u4E2D\u5EAD"
+    cycle:
+    - R05
+    - R06
+    - R07
+    - R08
+    - R09
+    - R10
+    - R11
+    - R05
+    shortcut: S01
+    shortcut_path:
+    - S01
+  - id: L2
+    name: "\u6863\u6848\u5C42\u6298\u8FD4\u73AF"
+    cycle:
+    - R14
+    - R15
+    - R16
+    - R17
+    - R18
+    - R14
+    shortcut: S02
+    shortcut_path:
+    - S02
+  - id: L3
+    name: "\u6838\u5FC3\u56DE\u5F52\u73AF"
+    cycle:
+    - R21
+    - R22
+    - R23
+    - R24
+    - R25
+    - R21
+    shortcut: S03
+    shortcut_path:
+    - S03
+  - id: L4
+    name: "\u6DF1\u5C42\u2014\u4E2D\u5EAD\u56DE\u73AF"
+    cycle:
+    - R08
+    - R09
+    - R10
+    - R11
+    - R12
+    - R13
+    - R14
+    - R15
+    - R16
+    - R17
+    - R18
+    - R08
+    shortcut: S04
+    shortcut_path:
+    - S04
+  - id: L5
+    name: "\u6F6E\u75D5\u9F9B\u5165\u53E3\u73AF"
+    cycle:
+    - R03
+    - R30
+    - R04
+    - R03
+    shortcut: 
+    shortcut_path: []
+  - id: L6
+    name: "\u4E2D\u5EAD\u4E0B\u5C42\u73AF"
+    cycle:
+    - R05
+    - R06
+    - R07
+    - R08
+    - R31
+    - R05
+    shortcut: 
+    shortcut_path: []
+  - id: L7
+    name: "\u56DE\u6C34\u5BA4\u5C0F\u73AF"
+    cycle:
+    - R09
+    - R10
+    - R32
+    - R09
+    shortcut: 
+    shortcut_path: []
+  - id: L8
+    name: "\u76C6\u5730\u4E0A\u6CBF\u73AF"
+    cycle:
+    - R09
+    - R33
+    - R11
+    - R10
+    - R09
+    shortcut: 
+    shortcut_path: []
+  - id: L9
+    name: "\u6863\u6848\u6298\u5C04\u73AF"
+    cycle:
+    - R14
+    - R15
+    - R16
+    - R17
+    - R18
+    - R35
+    - R14
+    shortcut: E40
+    shortcut_path:
+    - E40
+    - E41
+  - id: L10
+    name: "\u6863\u6848\u2014\u4F20\u64AD\u7F51\u73AF"
+    cycle:
+    - R18
+    - R19
+    - R37
+    - R20
+    - R36
+    - R18
+    shortcut: S05
+    shortcut_path:
+    - S05
+  - id: L11
+    name: "\u4F20\u64AD\u7F51\u2014\u7EC8\u7AE0\u5916\u73AF"
+    cycle:
+    - R19
+    - R37
+    - R22
+    - R21
+    - R36
+    - R20
+    - R37
+    - R19
+    shortcut: E48
+    shortcut_path:
+    - E48
+  - id: L12
+    name: "\u4F4E\u9891\u6C60\u73AF"
+    cycle:
+    - R23
+    - R38
+    - R24
+    - R23
+    shortcut: 
+    shortcut_path: []
+  - id: L13
+    name: "\u4E2D\u5EAD\u2014\u56DE\u63A5\u4E95\u73AF"
+    cycle:
+    - R05
+    - R39
+    - R21
+    - R36
+    - R20
+    - R37
+    - R19
+    - R18
+    - R08
+    - R31
+    - R05
+    shortcut: E46
+    shortcut_path:
+    - E46
+    - E47
+  earlySightlines:
+  - from: R03
+    target: K_SWITCH
+    clue: "\u8FDC\u5904\u95E8\u4F53\u6709\u95ED\u5408/\u5F00\u542F\u4E24\u79CD\u8F6E\u5ED3\u3002"
+  - from: R05
+    target: K_ALL
+    clue: "\u4E2D\u5EAD\u4E09\u5411\u51FA\u53E3\u663E\u793A\u7A33\u5B9A\u8F6E\u5ED3\u3001\u79FB\u52A8\u70B9\u7C07\u3001\u65AD\u88C2\u8109\u52A8\u3002"
+  - from: R08
+    target: K_GATHER
+    clue: "\u6D45\u51F9\u69FD\u548C\u70B9\u7C07\u53EF\u89C1\uFF0C\u56DE\u4E2D\u5EAD\u8DEF\u7EBF\u7545\u901A\u3002"
+  - from: R10
+    target: K_SCATTER
+    clue: "\u5BC6\u96C6\u70B9\u5835\u8DEF\uFF0C\u5B89\u5168\u7ED5\u884C\u8DEF\u5F84\u53EF\u8BFB\u3002"
+  - from: R13
+    target: K_CONNECT
+    clue: "\u4E24\u7AEF\u540C\u6B65\u56DE\u5E94\uFF0C\u65AD\u53E3\u9057\u8FF9\u53EF\u89C1\u3002"
+  - from: R21
+    target: K_ALL
+    clue: "\u7EC8\u7AE0\u591A\u5C42\u7ED3\u6784\u4E0E\u7A33\u5B9A\u8F6E\u5ED3\u53EF\u89C1\u3002"
+  - from: R14
+    target: K_ARCHIVE_LOOP
+    clue: "\u4E66\u67B6\u5C3D\u5934\u6709\u4E0ER18\u76F8\u540C\u7684\u8109\u52A8\uFF0C\u95E8\u5C1A\u672A\u54CD\u5E94\u3002"
+  - from: R05
+    target: K_DEEP_RETURN
+    clue: "\u5730\u9762\u53EF\u663E\u73B0\u73AF\u72B6\u4E95\u7EB9\uFF0C\u4F46\u4E95\u95E8\u4ECD\u95ED\u5408\u3002"
+  layout:
+    coordinate_system: abstract room-grid
+    grid:
+      step_x: 250
+      step_y: 130
+      room_w: 190
+      room_h: 78
+      origin_x: 100
+      origin_y: 90
+      unit: abstract room-grid cell; not gameplay meters
+    region_arrangement:
+      A1: "\u897F\u4FA7\u5165\u53E3\u9057\u8FF9\uFF0C\u542B\u4E00\u6761\u663E\u73B0\u540E\u53EF\u53D1\u73B0\u7684\u9690\u79D8\u5C0F\u73AF"
+      A2: "\u4E2D\u897F\u90E8\u67A2\u7EBD\u53CA\u4E0B\u5C42\u56DE\u63A5\u4E95\u9053"
+      A3: "\u4E2D\u5EAD\u5317\u4FA7\u76C6\u5730\uFF0C\u5F62\u6210\u6D45\u5C42\u4E0E\u5916\u6CBF\u53CC\u73AF"
+      A4: "\u4E2D\u5EAD\u4E1C\u4FA7\u6863\u6848\u5C42\uFF0C\u53D6\u5F97\u8FDE\u540E\u5F00\u542F\u4FA7\u5411\u56DE\u8BBF\u7EBF"
+      A5: "\u4E1C\u5357\u4F20\u64AD\u7F51\u53CA\u7EC8\u7AE0\u5916\u73AF\uFF0C\u4E0E\u6863\u6848\u5C42\u548C\u56DE\u63A5\u5385\u4EA4\u7EC7"
+    diagram_room_size_px:
+    - 190
+    - 78
+    unity_units_per_100_pixels: 1
+  criticalPath:
+  - R01
+  - R02
+  - R03
+  - R04
+  - R05
+  - R06
+  - R07
+  - R08
+  - R09
+  - R10
+  - R11
+  - R12
+  - R13
+  - R14
+  - R15
+  - R16
+  - R17
+  - R18
+  - R19
+  - R37
+  - R20
+  - R36
+  - R21
+  - R22
+  - R23
+  - R24
+  - R25
+  - R26
+  - R27
+  progressionAssumptions:
+  - "\u663E\u5728\u5F00\u573A\u81EA\u52A8\u53D6\u5F97\u3002"
+  - "\u8F6C\u3001\u6536\u3001\u653E\u3001\u8FDE\u5206\u522B\u5728R06\u3001R09\u3001R12\u3001R16\u53D6\u5F97\u3002"
+  - "\u53EF\u9009\u623F\u5956\u52B1\u4E0D\u542B\u4E3B\u7EBF\u5173\u952E\u80FD\u529B\u3002"
+  - "\u6240\u6709\u901A\u9053\u53CC\u5411\uFF0C\u4E0D\u4F7F\u7528\u4E0D\u53EF\u9006\u5355\u5411\u5760\u843D\u3002"
+  rooms:
+  - {fileID: 1625277741}
+  - {fileID: 2124565360}
+  - {fileID: 1712251838}
+  - {fileID: 471764716}
+  - {fileID: 422636133}
+  - {fileID: 477137029}
+  - {fileID: 504138963}
+  - {fileID: 1200112757}
+  - {fileID: 442758348}
+  - {fileID: 187771372}
+  - {fileID: 1119059424}
+  - {fileID: 353965538}
+  - {fileID: 2138949579}
+  - {fileID: 1286651767}
+  - {fileID: 1505875868}
+  - {fileID: 1565977351}
+  - {fileID: 172435239}
+  - {fileID: 1633589058}
+  - {fileID: 964148355}
+  - {fileID: 525927413}
+  - {fileID: 2038582786}
+  - {fileID: 504945956}
+  - {fileID: 1818840127}
+  - {fileID: 1120177966}
+  - {fileID: 1259703566}
+  - {fileID: 767293199}
+  - {fileID: 881016835}
+  - {fileID: 721705875}
+  - {fileID: 1127526291}
+  - {fileID: 841314446}
+  - {fileID: 1177237112}
+  - {fileID: 503231684}
+  - {fileID: 749447538}
+  - {fileID: 60746893}
+  - {fileID: 1257389974}
+  - {fileID: 12989517}
+  - {fileID: 748709721}
+  - {fileID: 156766144}
+  - {fileID: 1431561651}
+  unityUnitsPer100Pixels: 1
+  sourcePixelCenterX: 1945
+  sourcePixelCenterY: 454
+--- !u!4 &2041228294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041228292}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 140406277}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2124565358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2124565359}
+  - component: {fileID: 2124565360}
+  m_Layer: 0
+  m_Name: "R02 - \u884C\u8005\u7684\u521D\u6B21\u6307\u5F15"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2124565359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124565358}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15, y: -0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2124565360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124565358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R02
+  roomName: "\u884C\u8005\u7684\u521D\u6B21\u6307\u5F15"
+  regionId: A1
+  regionName: "\u5931\u8C10\u5CB8\u7EBF"
+  function: "\u8BA4\u8BC6\u4EA4\u4E92\u3001\u65BD\u6CD5\u5668\u4E0E\u964C\u751F\u97F3\u578B\u3002"
+  pacingBeat: teach
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R01
+  recoveryAndReturn: "\u5BF9\u767D\u53EF\u91CD\u590D\uFF0C\u4E0D\u6D88\u8017\u8D44\u6E90\u3002"
+  connections:
+  - id: E02
+    targetRoom: {fileID: 1712251838}
+    label: "\u9057\u8FF9\u5185\u4FA7"
+    kind: 0
+    sourceType: walkway
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge: []
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom: []
+    notes: 
+--- !u!1 &2138949577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2138949578}
+  - component: {fileID: 2138949579}
+  m_Layer: 0
+  m_Name: "R13 - \u5355\u72EC\u8BD5\u7528\u653E"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2138949578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138949577}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 0.65, z: 0}
+  m_LocalScale: {x: 1.9, y: 0.78, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140406277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2138949579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138949577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7508c2bb516e840a58192d285798c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldMapRoom
+  roomId: R13
+  roomName: "\u5355\u72EC\u8BD5\u7528\u653E"
+  regionId: A4
+  regionName: "\u6563\u70B9\u6863\u6848\u5C42"
+  function: "\u5355\u76EE\u6807\u6D4B\u8BD5\u653E\u5E76\u6E05\u51FA\u4F20\u64AD\u8DEF\uFF1B\u8FDC\u5904\u53EF\u89C1\u65AD\u88C2\u53CC\u7AEF\u3002"
+  pacingBeat: teach
+  grantsKnowledge: []
+  optional: 0
+  hidden: 0
+  knowledgeVisibleBeforeMastery:
+  - R12
+  recoveryAndReturn: "\u5931\u8D25\u53EF\u9000\u56DE\uFF0C\u4E0D\u6D88\u8017\u80FD\u529B\u3002"
+  connections:
+  - id: E13
+    targetRoom: {fileID: 1286651767}
+    label: "\u5206\u5C94\u6E05\u7406\u8DEF"
+    kind: 1
+    sourceType: knowledge_gate
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - scatter
+    shortcut: 0
+    hidden: 0
+    optional: 0
+    openedFrom: 
+    previewedFrom:
+    - R13
+    notes: 
+  - id: E29
+    targetRoom: {fileID: 1127526291}
+    label: "\u4FA7\u58F0\u6536\u85CF\u652F\u7EBF"
+    kind: 6
+    sourceType: optional_branch
+    directionality: bidirectional
+    oneWay: 0
+    requiresKnowledge:
+    - scatter
+    shortcut: 0
+    hidden: 0
+    optional: 1
+    openedFrom: R13
+    previewedFrom:
+    - R13
+    notes: 
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 2041228294}
